@@ -7,6 +7,8 @@ https://matthewhorne.me/how-to-install-python-and-pip-on-windows-10/
 ##### Step 2 - Install flask with PIP
 ````
 pip install flask
+
+if you're using python3 try $pip3 install flask
 ````
 
 ### Usage
