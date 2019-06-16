@@ -9,9 +9,12 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/navbar.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/gallery.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/splash_screen.css') }}">
 
 </head>
 <body>
+    {% include 'splash_screen.html' %}
+
     <header>
         {% include 'components/_navbar.html' %}
     </header>
@@ -43,6 +46,5 @@
     <script src="{{ url_for('static', filename='js/gallery.js') }}"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     <script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/splash.js') }}"></script>
 </body>
 </html>

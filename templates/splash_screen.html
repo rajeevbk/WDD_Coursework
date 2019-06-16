@@ -1,0 +1,14 @@
+<div id="splash-screen" class="text-center text-white">
+    <h1>Discover</h1>
+    <h2>Team</h2>
+
+    <div class="team-member-grid">
+    {% for i in range(1,5) %}
+    <div class="team-member-card">
+        <img class="profile-pic" src="https://www.w3schools.com/howto/img_avatar.png" alt="Team Member #1">
+        <h3>Name of ME</h3>
+        <h3>Student {{ i }}</h3>
+    </div>
+    {% endfor %}
+    </div>
+</div>

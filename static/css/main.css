@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*  Color utils   */
+
+.bg-black{
+    background-color: #000;
+}
+
+.text-white{
+    color: white;
+}
+
+/* -------------- */
+
+
+.text-center{
+    text-align: center;
+}
+
+
+/*   Flex utils   */
+.d-flex{
+    display: flex;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.flex-row{
+    flex-direction: row;
+}
+/* -------------- */
