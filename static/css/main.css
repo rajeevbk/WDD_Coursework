@@ -10,7 +10,15 @@
 }
 
 .text-white{
-    color: white;
+    color: #DADADA;
+}
+
+.text-lightgreen{
+    color: #39ABA4;
+}
+
+.text-lightblue{
+    color: #658DF1;
 }
 
 /* -------------- */
