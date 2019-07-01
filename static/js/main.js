@@ -5,7 +5,7 @@ setTimeout(function(){
 
 setTimeout(function(){
         document.querySelector("#splash-screen").remove();
-}, 3950);
+}, 4000);
 
 function changeGlobalFontSize(step) {
     if(document.body.style.fontSize){
