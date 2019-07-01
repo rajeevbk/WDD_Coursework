@@ -1,14 +1,12 @@
-<div id="splash-screen" class="text-center text-white">
-    <h1>Discover</h1>
-    <h2>Team</h2>
-
-    <div class="team-member-grid">
-    {% for i in range(1,5) %}
-    <div class="team-member-card">
-        <img class="profile-pic" src="https://www.w3schools.com/howto/img_avatar.png" alt="Team Member #1">
-        <h3>Name of ME</h3>
-        <h3>Student {{ i }}</h3>
-    </div>
-    {% endfor %}
+<div id="splash-screen">
+    <div class="splash-screen-grid">
+        <div class="splash-screen-logo">
+            <img src="{{ url_for('static', filename='img/loading_screen.png') }}" alt="Sri Lankan Culture">
+        </div>
+        <div>
+            <h2 style="font-size: 4em" class="text-lightgreen">Visit</h2>
+            <h1 style="font-size: 6em" class="text-lightblue">Sri Lanka</h1>
+            <h5 style="font-size: 1.8em" class="text-white">By: Rajeev, Kevin, Rahma and Isala</h5>
+        </div>
     </div>
 </div>
