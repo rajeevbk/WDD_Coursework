@@ -1,0 +1,117 @@
+.shop-item {
+    display: inline-flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: flex-start;
+}
+
+.price-container{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.shop-item > .price-container > .item-price {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: bold;
+}
+
+.shop-item > .item-name {
+    font-family: 'courier-new', Helvetica, sans-serif;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.section-title {
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    font-size: 48px;
+    line-height: 55px;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+header {
+    margin-bottom: 50px;
+}
+
+
+.btn-add-cart {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    transition: all 0.5s;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.btn-add-cart i {
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.btn-add-cart i:after {
+    content: 'add_shopping_cart';
+    position: absolute;
+    opacity: 0;
+    top: -13px;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.btn-add-cart:hover i {
+    padding-right: 25px;
+}
+
+.btn-add-cart:hover i:after {
+    opacity: 1;
+    right: 0;
+}
+
+.btn-remove-cart {
+    background-color: #900000;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    transition: all 0.5s;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.btn-remove-cart i {
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.btn-remove-cart i:after {
+    content: 'remove_shopping_cart';
+    position: absolute;
+    opacity: 0;
+    top: -13px;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.btn-remove-cart:hover i {
+    padding-right: 25px;
+}
+
+.btn-remove-cart:hover i:after {
+    opacity: 1;
+    right: 0;
+}
+

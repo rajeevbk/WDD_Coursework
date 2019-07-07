@@ -5,14 +5,34 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/navbar.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/shop.css') }}">
     <title>Shop</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <h1>Shop</h1>
+        </nav>
+    </header>
+    <h2 class="section-title">T-Shirts & Shirts</h2>
+    <section id="clothing">
+        {% for i in range(2) %}
+            {% set price =  (range(1000, 100000) | random)/100 %}
+            <div class="shop-item">
+                <img src="{{ url_for('static', filename='img/GGOEGXXX1196.png') }}" alt="Google Blue T-Shirt" />
+                <span class="item-name">Google Blue Shirt</span>
+                <div class="price-container">
+                    <span class="item-price">$ {{ price }}</span>
+                    <button id="item-{{ i }}" data-price="{{ price }}" class="btn-add-cart" onclick="addToCart(this.id)"><span>Add to Cart </span> <i class="material-icons" style="vertical-align: middle;"></i></button>
+                </div>
 
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+            </div>
+        {% endfor %}
+    </section>
     <script src="{{ url_for('static', filename='js/shop.js') }}"></script>
+
 </body>
 </html>
