@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*  Color utils   */
+
+.bg-black{
+    background-color: #000;
+}
+
+.bg-success{
+    background-color: #28a745 !important;
+}
+.bg-danger{
+    background-color: #dc3545 !important;
+}
+
+.text-black{
+    color: #000;
+}
+
+.text-success{
+    color: #28a745 !important;
+}
+.text-danger{
+    color: #dc3545 !important;
+}
+
+.text-white{
+    color: #DADADA;
+}
+
+.text-lightgreen{
+    color: #39ABA4;
+}
+
+.text-lightblue{
+    color: #658DF1;
+}
+
+.text-right{
+    text-align: right !important;
+}
+.text-center{
+    text-align: center !important;
+}
+/* -------------- */
+
+.pointer {
+    cursor: pointer;
+}
+
+
+.d-none{
+    display: none !important;
+}
+.d-block{
+    display: block !important;
+}
+.d-inline-block{
+    display: inline-block !important;
+}
+
+.text-center{
+    text-align: center;
+}
+
+
+/*   Flex utils   */
+.d-flex{
+    display: flex;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.flex-row{
+    flex-direction: row;
+}
+/* -------------- */
