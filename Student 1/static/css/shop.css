@@ -1,48 +1,237 @@
-.shop-item {
-    display: inline-flex;
-    flex-direction: column;
-    margin: 10px;
-    align-items: flex-start;
+/***************/
+/* Shop Global */
+/***************/
+label {
+    display: block;
 }
 
-.price-container{
+.shop {
+    margin: 50px;
+}
+
+/***************/
+/***************/
+
+
+/**************/
+/* Shop Items */
+/**************/
+.shop .shop-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    flex-wrap: wrap;
+}
+
+.shop-items .shop-item {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 20px 10px 10px;
+}
+
+.shop-item img {
+    height: 300px;
+    max-width: 100%;
+}
+
+.price-container {
     margin-top: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
+    width: 98%;
 }
 
-.shop-item > .price-container > .item-price {
-    font-size: 24px;
+.price-container input[type=number]{
+    width: 30px;
+}
+
+.item-quantity {
+    margin-top: 7px;
+    font-size: 1em;
+    /*line-height: 28px;*/
+    font-weight: bold;
+}
+.item-price {
+    font-size: 1.3em;
     line-height: 28px;
     font-weight: bold;
 }
 
 .shop-item > .item-name {
     font-family: 'courier-new', Helvetica, sans-serif;
-    font-size: 24px;
+    font-size: 1.3em;
     line-height: 28px;
 }
 
 .section-title {
     font-family: 'Trebuchet MS', Helvetica, sans-serif;
-    font-size: 48px;
+    font-size: 2.1em;
     line-height: 55px;
 }
 
-section {
+/**************/
+/**************/
+
+
+@media (max-width: 600px) {
+    .shop-items .shop-item {
+        margin: 5px;
+        width: 100%;
+    }
+
+    .shop-item img {
+        height: auto;
+    }
+
+    .shop {
+        margin: 5px;
+    }
+
+    .checkout-button {
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 10px;
+        float: right;
+    }
+
+    #billing, #order {
+        width: 100% !important;
+    }
+}
+
+
+/***********************/
+/* Shop Checkout Utils */
+/***********************/
+#checkout-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    background-color: #ffffff;
+}
+
+#checkout {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
-header {
-    margin-bottom: 50px;
+.bill-header{
+    margin-bottom: 40px;
 }
 
+#billing, #order {
+    width: 40%;
+    margin: 30px;
+}
 
+.checkout-button {
+    position: fixed;
+    top: 100px;
+    right: 10px;
+}
+
+.checkout-button span {
+    vertical-align: top;
+    background-color: #e64747;
+    text-align: center;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: none;
+}
+
+.checkout-close {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+/***********************/
+/***********************/
+
+
+/*****************/
+/* Billing Info */
+/*****************/
+input[type=text], input[type=email], select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+table {
+    width: 100%;
+}
+
+button[type=submit] {
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+/*****************/
+/*****************/
+
+
+/********************/
+/*  Order Details   */
+/********************/
+#order > table > thead > tr > th {
+    font-size: 1.5em;
+    padding: 0 40px 0 40px;
+}
+
+#order > table > tbody > tr > td {
+    font-size: 1.1em;
+    padding: 10px;
+    text-align: right;
+}
+
+#order > table > tbody > tr > .order-item {
+    font-size: 1.1em;
+    padding: 10px 10px 10px 20px;
+    text-align: center !important;
+}
+
+/********************/
+/********************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add To Cart Animation */
 .btn-add-cart {
     background-color: #2d2d2d;
     color: #ffffff;
@@ -115,3 +304,4 @@ header {
     right: 0;
 }
 
+/******************/

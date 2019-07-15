@@ -9,6 +9,24 @@
     background-color: #000;
 }
 
+.bg-success{
+    background-color: #28a745 !important;
+}
+.bg-danger{
+    background-color: #dc3545 !important;
+}
+
+.text-black{
+    color: #000;
+}
+
+.text-success{
+    color: #28a745 !important;
+}
+.text-danger{
+    color: #dc3545 !important;
+}
+
 .text-white{
     color: #DADADA;
 }
@@ -21,8 +39,28 @@
     color: #658DF1;
 }
 
+.text-right{
+    text-align: right !important;
+}
+.text-center{
+    text-align: center !important;
+}
 /* -------------- */
 
+.pointer {
+    cursor: pointer;
+}
+
+
+.d-none{
+    display: none !important;
+}
+.d-block{
+    display: block !important;
+}
+.d-inline-block{
+    display: inline-block !important;
+}
 
 .text-center{
     text-align: center;

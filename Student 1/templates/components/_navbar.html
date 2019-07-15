@@ -1,3 +1,27 @@
-<h1>NavBar</h1>
-<button onclick="changeGlobalFontSize(0.1)">+ Font Size</button>
-<button onclick="changeGlobalFontSize(-0.1)">- Font Size</button>
+<nav id="desktop-nav">
+    <ul>
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="#aboutUs">About Us</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+        <li><a href="#gallery">Galley</a></li>
+        <li><a href="/stop/">Store</a></li>
+        <li><a href="sitemap.html">Site Map</a></li>
+        <li class="nav-right"><a onclick="changeGlobalFontSize(-0.1)">- Font Size</a></li>
+        <li class="nav-right"><a onclick="changeGlobalFontSize(0.1)">+ Font Size</a></li>
+    </ul>
+</nav>
+<nav id="mobile-nav">
+    <ul>
+        <li onclick="toggleMobileNavBar();"><i class="material-icons text-white nav-right" style="margin: 5px">menu</i></li>
+    </ul>
+    <ul id="mobile-nav-items" class="d-none">
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="#aboutUs">About Us</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+        <li><a href="#gallery">Galley</a></li>
+        <li><a href="/stop/">Store</a></li>
+        <li><a href="sitemap.html">SiteMap</a></li>
+        <li><a onclick="changeGlobalFontSize(0.1)">+ Font Size</a></li>
+        <li><a onclick="changeGlobalFontSize(-0.1)">- Font Size</a></li>
+    </ul>
+</nav>

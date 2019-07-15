@@ -1,0 +1,63 @@
+<section id="checkout-wrapper">
+    <span class="checkout-close pointer text-danger" onclick="hideCheckOut();"><i class="material-icons" style="font-size: 3em;">close</i></span>
+    <div id="checkout">
+        <div id="billing">
+            <h2 class="bill-header">BILLING DETAILS</h2>
+            <form name="billing-details">
+                <label for="first-name">First Name</label>
+                <input id="first-name" name="first-name" type="text"/>
+
+                <label for="last-name">Last Name</label>
+                <input id="last-name" name="last-name" type="text"/>
+
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="">Select your Country</option>
+                    <option value="lk">Sri Lanka</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="usa">United States</option>
+                    <option value="ca">Canada</option>
+                </select>
+
+                <label for="street-address">Street Address</label>
+                <input id="street-address" name="street-address" type="text"/>
+
+                <label for="city">City</label>
+                <input id="city" name="city" type="text"/>
+
+
+                <label for="zip">Zip</label>
+                <input id="zip" name="zip" type="text"/>
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email"/>
+            </form>
+        </div>
+        <div id="order">
+            <h2 class="bill-header">YOUR ORDER</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Product</th>
+                    <th class="text-right">Price</th>
+                </tr>
+                </thead>
+                <tbody id="cart">
+                <tr>
+                    <th>SubTotal</th>
+                    <td id="order-subtotal">0 LKR</td>
+                </tr>
+                <tr>
+                    <th>Tax (5%)</th>
+                    <td id="order-tax">0 LKR</td>
+                </tr>
+                <tr>
+                    <th>Total</th>
+                    <td id="order-total">0 LKR</td>
+                </tr>
+                </tbody>
+            </table>
+            <button class="bg-success" type="submit" onclick="checkout();">Place the Order</button>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,74 @@
+<div id="shop-wrapper">
+    <section id="clothing" class="shop">
+        <h2 class="section-title">T-Shirts & Shirts</h2>
+        <div class="shop-items">
+            {% for item in clothing %}
+                <div class="shop-item">
+                    <img src="{{ url_for('static', filename='img/shop/t-shirts/'+item['filename']) }}"
+                         alt="{{ item['title'] }}"/>
+                    <span class="item-name">{{ item['title'] }}</span>
+                    <span class="item-price">LKR {{ item['price'] }}</span>
+                    <div class="price-container">
+                        <label class="item-quantity"> Quantity
+                            <input id="clothing-{{ loop.index }}-quantity" type="number" min="1" max="10" value="1">
+                        </label>
+                        <button id="clothing-{{ loop.index }}" data-item-name="{{ item['title'] }}" data-price={{ item['price'] }}
+                                class="btn-add-cart"
+                                onclick="addToCart(this.id)"><span>Add to Cart </span> <i class="material-icons"
+                                                                                          style="vertical-align: middle;"></i>
+                        </button>
+
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    <section id="mugs" class="shop">
+        <h2 class="section-title">Mugs</h2>
+        <div class="shop-items">
+            {% for item in mugs %}
+                <div class="shop-item">
+                    <img src="{{ url_for('static', filename='img/shop/mugs/'+item['filename']) }}"
+                         alt="{{ item['title'] }}"/>
+                    <span class="item-name">{{ item['title'] }}</span>
+                    <span class="item-price">LKR {{ item['price'] }}</span>
+                    <div class="price-container">
+                        <label class="item-quantity"> Quantity
+                            <input id="mugs-{{ loop.index }}-quantity" type="number" min="1" max="10" value="1">
+                        </label>
+                        <button id="mugs-{{ loop.index }}" data-item-name="{{ item['title'] }}" data-price={{ item['price'] }}
+                                class="btn-add-cart"
+                                onclick="addToCart(this.id)"><span>Add to Cart </span> <i class="material-icons"
+                                                                                          style="vertical-align: middle;"></i>
+                        </button>
+
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    <section id="mugs" class="shop">
+        <h2 class="section-title">Paintings</h2>
+        <div class="shop-items">
+            {% for item in paintings %}
+                <div class="shop-item">
+                    <img src="{{ url_for('static', filename='img/shop/paintings/'+item['filename']) }}"
+                         alt="{{ item['title'] }}"/>
+                    <span class="item-name">{{ item['title'] }}</span>
+                    <span class="item-price">LKR {{ item['price'] }}</span>
+                    <div class="price-container">
+                        <label class="item-quantity"> Quantity
+                            <input id="paintings-{{ loop.index }}-quantity" type="number" min="1" max="10" value="1">
+                        </label>
+                        <button id="paintings-{{ loop.index }}" data-item-name="{{ item['title'] }}" data-price={{ item['price'] }}
+                                class="btn-add-cart"
+                                onclick="addToCart(this.id)"><span>Add to Cart </span> <i class="material-icons"
+                                                                                          style="vertical-align: middle;"></i>
+                        </button>
+
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>

@@ -11,28 +11,21 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/shop.css') }}">
     <title>Shop</title>
 </head>
-<body>
-    <header>
-        <nav>
-            <h1>Shop</h1>
-        </nav>
-    </header>
-    <h2 class="section-title">T-Shirts & Shirts</h2>
-    <section id="clothing">
-        {% for i in range(2) %}
-            {% set price =  (range(1000, 100000) | random)/100 %}
-            <div class="shop-item">
-                <img src="{{ url_for('static', filename='img/GGOEGXXX1196.png') }}" alt="Google Blue T-Shirt" />
-                <span class="item-name">Google Blue Shirt</span>
-                <div class="price-container">
-                    <span class="item-price">$ {{ price }}</span>
-                    <button id="item-{{ i }}" data-price="{{ price }}" class="btn-add-cart" onclick="addToCart(this.id)"><span>Add to Cart </span> <i class="material-icons" style="vertical-align: middle;"></i></button>
-                </div>
 
-            </div>
-        {% endfor %}
-    </section>
-    <script src="{{ url_for('static', filename='js/shop.js') }}"></script>
+<body>
+<header>
+    {% include 'components/_navbar.html' %}
+</header>
+
+<div class="checkout-button pointer" onclick="showCheckOut();">
+    <i class="material-icons">shopping_cart</i>
+    <span id="items-in-cart"></span>
+</div>
+{% include 'components/shop/_items.html' %}
+{% include 'components/shop/_checkout.html' %}
+
+<script src="{{ url_for('static', filename='js/shop.js') }}"></script>
+<script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
 
 </body>
 </html>
