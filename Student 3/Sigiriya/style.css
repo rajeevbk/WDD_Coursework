@@ -1,0 +1,23 @@
+body{
+    font-size: 20px;
+    font-family: 'Work Sans', sans-serif;
+    color: #333;
+    font-weight: 300;
+    text-align: center;
+    background-color: #f8f6f0;
+}
+h1{
+  font-weight: 300;
+  margin: 0px;
+  padding: 10px;
+  font-size: 50px;
+  background-color: #444;
+  color: #fff;
+}
+
+img {
+  border-radius: 8px;
+  margin-top: 40px;
+  width: 450px;
+
+}

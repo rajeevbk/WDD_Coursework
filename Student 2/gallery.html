@@ -1,197 +1,182 @@
-<head>
-    <link rel="stylesheet" type="text/css" href="static/css/gallery.css">
-    <title>Gallery</title>
-    <div class="heading"><h1>Places to Visit</h1></div>
-</head>
-<style>
-* {
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+              box-sizing: border-box;
+            }
 
-body {
-  margin: 0;
-  font-family: Arial;
-}
+            body {
+              margin: 0;
+              font-family: Arial;
 
-.header {
-  text-align: center;
-  padding: 32px;
-}
 
-.row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
+            }
+            .img_bar{
+                padding: 50px;
+                align-content: center;
 
-/* Create four equal columns that sits next to each other */
-.column {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
-}
+            }
+            /* The grid: six equal images that floats next to each other */
+            .column {
+              float: left;
+              width: 16.6%;
+              padding: 4px;
+            }
 
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
-}
+            /* Style the images inside the grid */
+            .column img {
+              opacity: 0.8; 
+              cursor: pointer;
+            }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%;
-  }
-}
+            .column img:hover {
+              opacity: 1;
+            }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
-  }
-}
+            /* Clear floats after the columns */
+            .row:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
 
-.image {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-    }
+            /* The expanding image container */
+            .container {
+              position: relative;
+              display: none;
+              background: transparent !important;
+              color: "";
+              background-image: linear-gradient(to right, white , #051a3b);
+              width: 98.5%;
+            }
 
-.textbackground{
-  width:100%;
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 95%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.4);
+            #select1:checked~div.wrapper {
+              background-color: black;
+              color: white;
+            }
+
+            #imgdescription{
+                position: absolute;
+                top:10%;
+                left: 52%;
+                color: "";
+                font-size: 1.2em;
+                /*width: 25em;
+                word-wrap: break-word;*/
+            }
+
+            /* Expanding image text */
+            #imgtext {
+              position: absolute;
+              bottom: 2%;
+              left: 1%;
+              color: white ;
+              font-size: 1.5em;
+            }
+
+
+                /*#description{
+                    width: 20em;
+                    word-wrap: break-word;
+                }   */ 
+
+            /* Closable button inside the expanded image */
+            .closebtn {
+              position: absolute;
+              top: 1px;
+              right: 1px;
+              color: "";
+              font-size: 2em;
+              cursor: pointer;
+            }
+            
+            #expandedImg{
+              width: 50%;
+              height: 500px;
+            } 
+            
+
+        </style>
+    </head>
     
-}
-.container {
-  position: relative;
-  width: 100%;
-}
-.container:hover .textbackground {
-  opacity: 1;
-}
-.text {
-  color: white;
-  font-size: 16px;
-</style>
-<body>
-	<div class="row"> 
-      <div class="column">
-        <div class="container">
-        <img src="IMAGES/elephant%20orphanage.jpg" style="width:100%">
-        <div class="textbackground">
-        <div class="text">yala</div>
+    <body>
+        <table>
+            <tr>
+                <td>
+                <form>
+                Background color:
+                <!-- Drop box to change text color-->
+                    <select name="background_color" size="1" onChange=(document.body.style.backgroundColor="#"+background_color.options[background_color.selectedIndex].value)>
+                        <option value="0099ff">Blue</option>
+                        <option value="1aff90">Green</option>
+                        <option value="8484e1">Light purple</option>
+                        <option value="000033">Dark blue</option>
+                        <option value="FFFFFF" selected>White</option>
+                    </select>
+                </form>
+                </td>
+                <td>
+                <form>
+                Text color:
+                <!-- Drop box to change text color-->
+                <select name="text_color" size="1" onChange=(document.body.style.color="#"+text_color.options[text_color.selectedIndex].value)>
+                    <option value="000000" selected>Black</option>
+                    <option value="ff4d4d">Rose</option>
+                    <option value="4d4dff">Blue</option>
+                    <option value="FFFFFF">White</option>
+                </select>
+                </form>
+                </td>
+            </tr>
+        </table>
+
+        <h2 style="text-align: center">Top 6 Cities to Visit</h2>
+
+
+      <!-- The six columns -->
+        <div class="img_bar">
+            <div class="row">
+                  <div class="column">
+                        <img src="images/colombo.jpg" alt="Colombo" title="Colombo is the commercial capital of Sri Lanka. It's a busy and a Vibrant place with a mixture of modern life and with colonial buildings situated around the city. It is the best place to experience a luxury life along with the best food from around the world and tons of entertainment." style="width:100%"; height="120" onmousemove="myFunction(this);" >
+                  </div>
+                  <div class="column">
+                        <img src="images/Kandy2.jpg" alt="Kandy" title="Last Successful Kingdom of Sri Lanka protected by the surrounding mountians is the best place to visit to experience the heritage and different cultures of Sri Lanka. The city is filled with its own secrets about the history of the last Kindom for you to explore. "style="width:100%" ; height="120" onmousemove="myFunction(this);">
+                  </div>
+                  <div class="column">
+                        <img src="images/Anuradhapura4.jpg" alt="Anuradhapura"title="The first Kindom of Sri lanka has still been able to amaze us with its creations. The city is filled with mind-blowing constructions made with a technology still puzzles the world. Also filled with the history of Buddhism and its influence to art, is a must place to visit to realize the true value of life." style="width:100%"; height="120"         onmousemove="myFunction(this);">
+                  </div>
+                  <div class="column">
+                        <img src="images/galle2.jpg"alt="Galle" title="Located in the Southern Province this place carries its own history and beauty. It has been a special place through out history with its location in the Indian ocean. Filled with wonderfull beaches and ruins of history the place is the best experience many cultures and the ocean life." style="width:100%"; height="120" onmousemove="myFunction(this);">
+                  </div>
+                  <div class="column">
+                        <img src="images/Nuwaraeliya.jpg" alt="Nuwara-Eliya" title="Located in the Central Province and been home to many wonderful Waterfalls this place is a paradise its self. Arriving here from a wonderful train journey to vitness the cold  weather on mountains covered by green and the finest tea in the world and to stay in a luxurious hotel with one of the finest views will be life lasting wonderful memory for you." style="width:100%"; height="120" onmousemove="myFunction(this);">
+                  </div>
+                        <div class="column">
+                        <img src="images/Polonnaruwa.jpg" alt="Polonnaruwa" title="The Strongest Kindom of Sri Lanka which had the worlds best irrigation systems is a city filled with ancient ruins and constructions. Giving shelter to many migrating birds all around the world the ancient city is filled with bio-diversity. It will give you vitness some amazing hospitality and culture and will give you the best experience you could have." style="width:100%"; height="120" onmousemove="myFunction(this);">
+                  </div>
+            </div>
+
+
+            <div class="container">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <img id="expandedImg">
+                <div id = "imgtext"></div>
+                <div id = "imgdescription"></div>
+            </div>
         </div>
-          </div>
-          <div class="container">
-        <img src="IMAGES/elle%20train.jpg" style="width:100%">
-        <div class="textbackground">
-        <div class="text">yala</div>
-        </div>
-          </div>
-          <div class="container">
-        <img src="IMAGES/Dambulla.jpg" style="width:100%">
-        <div class="textbackground">
-        <div class="text">yala</div>
-        </div>
-          </div>
-          <div class="container">
-        <img src="IMAGES/Anuradhapura.jpg" style="width:100%">
-        <div class="textbackground">
-        <div class="text">yala</div>
-        </div>
-          </div>
-          
-        
-      </div>
-      <div class="column">
-        <div class="container">
-        <img src="IMAGES/nuwaraeliya.jpg" style="width:100%">
-        <div class="textbackground">
-        <div class="text">yala</div>
-        </div>
-          </div><div class="container">
-        <img src="IMAGES/jaffna.jpg" style="width:100%">
-        <div class="textbackground">
-        <div class="text">yala</div>
-        </div>
-          </div><div class="container">
-        <img src="IMAGES/elephant%20orphanage.jpg" style="width:100%">
-        <div class="textbackground">
-        <div class="text">yala</div>
-        </div>
-          </div><div class="container">
-        <img src="IMAGES/elephant%20orphanage.jpg" style="width:100%">
-        <div class="textbackground">
-        <div class="text">yala</div>
-        </div>
-          </div>
-      </div>  
-      <div class="column">
-        <div class="container">
-        <img src="IMAGES/elephant%20orphanage.jpg" style="width:100%">
-        <div class="textbackground">
-        <div class="text">yala</div>
-        </div>
-          </div><div class="container">
-        <img src="IMAGES/elephant%20orphanage.jpg" style="width:100%">
-        <div class="textbackground">
-        <div class="text">yala</div>
-        </div>
-          </div><div class="container">
-        <img src="IMAGES/elephant%20orphanage.jpg" style="width:100%">
-        <div class="textbackground">
-        <div class="text">yala</div>
-        </div>
-          </div><div class="container">
-        <img src="IMAGES/elephant%20orphanage.jpg" style="width:100%">
-        <div class="textbackground">
-        <div class="text">yala</div>
-        </div>
-          </div>
-      </div>
-      <div class="column">
-        <div class="container">
-        <img src="IMAGES/pol2.jpg" style="width:100%">
-        <div class="textbackground">
-        <div class="text">yala</div>
-        </div>
-          </div><div class="container">
-        <img src="IMAGES/pol.jpg" style="width:100%">
-        <div class="textbackground">
-        <div class="text">yala</div>
-        </div>
-          </div><div class="container">
-        <img src="IMAGES/temple-tooth-kandy-sri-lanka-shutterstock_1037797372-660x420.jpg" style="width:100%">
-        <div class="textbackground">
-        <div class="text">yala</div>
-        </div>
-          </div><div class="container">
-        <img src="IMAGES/nine%20arch.jpg" style="width:100%">
-        <div class="textbackground">
-        <div class="text">yala</div>
-        </div>
-          </div>
-      </div>
-    </div>
-</body>
-<footer>
-</footer>
+        <script>
+            function myFunction(imgs) {
+              var expandImg = document.getElementById("expandedImg");
+              var imgText = document.getElementById("imgtext");
+              var imgdetails =document.getElementById("imgdescription")
+              expandImg.src = imgs.src;
+              imgText.innerHTML = imgs.alt;
+              imgdetails.innerHTML=imgs.title;
+              expandImg.parentElement.style.display = "grid";
+            }
+            
+        </script>
+    </body>
+</html>
