@@ -1,3 +1,7 @@
+/*
+    Inspired by https://www.w3schools.com/css/css_navbar.asp
+*/
+
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -18,12 +22,16 @@ nav ul li a {
     text-decoration: none;
 }
 
-#mobile-nav{
+#mobile-nav {
     display: none;
 }
 
 #mobile-nav ul li {
     float: none;
+}
+
+#mobile-nav .dropdown-content {
+    width: 100%;
 }
 
 a:hover:not(.active) {
@@ -34,16 +42,46 @@ a:hover:not(.active) {
     background-color: #4CAF50;
 }
 
-.nav-right{
+.nav-right {
     float: right;
 }
 
 
 @media (max-width: 667px) {
-    #mobile-nav{
+    #mobile-nav {
         display: block;
     }
-    #desktop-nav{
+
+    #desktop-nav {
         display: none;
     }
+}
+
+li.dropdown {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    /*text-align: left;*/
+}
+
+.dropdown-content a:hover {
+    background-color: #f1e673;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }

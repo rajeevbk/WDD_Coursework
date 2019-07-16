@@ -7,12 +7,13 @@ body{
 }
 
 .col-3{
-    width: 18%;
+    font-size: 1.5rem;
+    width: 20%;
 }
 .col-9{
-    margin-left: 6%;
     margin-top: 20px;
     width: 70%;
+    margin-left: 10px;
     overflow: hidden;
 }
 
@@ -35,4 +36,35 @@ body{
 .section-description{
     text-align: justify;
     margin: 20px 5px 20px 40px;
+}
+
+.section-description .title{
+    display: block;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.section-description .period{
+    display: block;
+    margin-top: 10px;
+    color: #ab1a00;
+}
+
+#skills-title{
+    margin-top: 30px;
+}
+
+.skills{
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.skills span{
+    display: block;
+    margin: 5px 2px 5px 40px;
+}
+
+.skills-wrapper{
+    margin-left: 20px;
 }

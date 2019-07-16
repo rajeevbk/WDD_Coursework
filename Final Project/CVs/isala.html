@@ -3,14 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <title>Isala Piyarisi</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/navbar.css">
     <link rel="stylesheet" type="text/css" href="../static/css/main.css">
     <link rel="stylesheet" type="text/css" href="../static/css/isala.css">
     <link rel="stylesheet" type="text/css" href="../static/fontawesome/css/all.min.css">
 </head>
 <body>
+<header>
+    <nav id="desktop-nav">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#aboutUs">About Us</a></li>
+            <li><a href="../index.html#quiz">Quiz</a></li>
+            <li><a href="../index.html#gallery">Galley</a></li>
+            <li><a href="../shop.html">Store</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">Meet the Team</a>
+                <div class="dropdown-content">
+                    <a class="active" href="isala.html">Isala Piyarisi</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </li>
+            <li><a href="../sitemap.html">Site Map</a></li>
+            <li class="nav-right"><a onclick="changeGlobalFontSize(-0.1)">- Font Size</a></li>
+            <li class="nav-right"><a onclick="changeGlobalFontSize(0.1)">+ Font Size</a></li>
+        </ul>
+    </nav>
+    <nav id="mobile-nav">
+        <ul>
+            <li onclick="toggleMobileNavBar();"><i class="fas fa-bars text-white nav-right fa-lg"
+                                                   style="margin: 5px"></i></li>
+        </ul>
+        <ul id="mobile-nav-items" class="d-none">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#aboutUs">About Us</a></li>
+            <li><a href="../index.html#quiz">Quiz</a></li>
+            <li><a href="../index.html#gallery">Galley</a></li>
+            <li><a href="../shop.html">Store</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">Meet the Team</a>
+                <div class="dropdown-content">
+                    <a class="active" href="isala.html">Isala Piyarisi</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </li>
+            <li><a href="sitemap.html">SiteMap</a></li>
+            <li><a onclick="changeGlobalFontSize(0.1)">+ Font Size</a></li>
+            <li><a onclick="changeGlobalFontSize(-0.1)">- Font Size</a></li>
+        </ul>
+    </nav>
+</header>
+
 <div class="row">
     <div class="col-3">
         <img class="profile-pic" src="../static/img/profile-pictures/isala.jpg" alt="Profile Picture of Isala">
+        <div class="skills-wrapper">
+            <h2 id="skills-title">Skills</h2>
+            <div class="skills">
+                <h4><i class="fas fa-desktop"></i> Front End</h4>
+                <span><i class="fab fa-html5"></i> HTML5, CSS3</span>
+                <span><i class="fab fa-js-square"></i> Javascript</span>
+                <span><i class="fab fa-react"></i> ReactJs</span>
+                <span><i class="fas fa-dove"></i> Flutter</span>
+                <span><i class="fab fa-bootstrap"></i>  Bootstrap</span>
+                <span><i class="fab fa-node-js"></i>  JQuery</span>
+            </div>
+            <div class="skills">
+                <h4><i class="fas fa-terminal"></i> Back End</h4>
+                <span><i class="fab fa-python"></i> Python</span>
+                <span><i class="fab fa-java"></i>Java</span>
+                <span><i class="fas fa-java"></i> Go Lang</span>
+                <span><i class="fas fa-flask"></i> Flask/Django</span>
+                <span><i class="fab fa-node-js"></i> Node.JS</span>
+                <span><i class="fas fa-project-diagram"></i> GraphQL</span>
+            </div>
+            <div class="skills">
+                <h4><i class="fas fa-server"></i>DevOps</h4>
+                <span><i class="fab fa-linux"></i> Linux</span>
+                <span><i class="fab fa-mysql"></i> MySQL</span>
+                <span><i class="fas fa-git"></i> Docker</span>
+                <span><i class="fab fa-digital-ocean"></i> DigitalOcean</span>
+                <span><i class="fas fa-git"></i> Nginx</span>
+                <span><i class="fab fa-git-square"></i> GIT</span>
+                <span><i class="fas fa-infinity"></i> CI/CD Pipelines</span>
+            </div>
+        </div>
     </div>
     <div class="col-9">
         <div class="text-center">
@@ -50,7 +129,54 @@
                 development.
             </p>
         </section>
+        <section id="experience">
+            <h2 class="section-heading"><i class="fas fa-briefcase"></i> Professional Experience</h2>
+            <div class="section-description">
+                <span class="title">Associate Software Engineer at ThinkSmart Solutions (PVT) Ltd</span>
+                <span class="period">July 2019 - Present</span>
+                <span class="title">Trainer Software Engineer at ThinkSmart Solutions (PVT) Ltd</span>
+                <span class="period">January 2019 - June 2019</span>
+                <span class="title">System Administrator at Black Assassins E-Sport</span>
+                <span class="period">April 2014 - Present</span>
+                <span class="title">Web Master at Southern Province Land Commissioner's Department</span>
+                <span class="period">November 2018 - Present</span>
+
+            </div>
+        </section>
+        <section id="education">
+            <h2 class="section-heading"><i class="fas fa-user-graduate"></i> Education</h2>
+            <div class="section-description">
+                <span class="title">BSc (Hons) Software Engineering, University of Westminster</span>
+                <span class="period">January 2019 - Present</span>
+                <span class="title">Richmond College, Galle</span>
+                <span class="period">February 2015 - August 2018</span>
+            </div>
+        </section>
+        <section id="education">
+            <h2 class="section-heading"><i class="fas fa-walking"></i> Extra-Curricular Activities</h2>
+            <div class="section-description">
+                <span class="title">President  at Richmond College IT Society</span>
+                <span class="period">July 2016 - July 2017</span>
+                <span class="title">President  at Richmond College Robotics Club</span>
+                <span class="period">October 2016 - October 2017</span>
+                <span class="title">Crew Member  at Richmond Live</span>
+                <span class="period">January 2015 - Present</span>
+            </div>
+        </section>
+        <section id="education">
+            <h2 class="section-heading"><i class="fas fa-medal"></i> Awards</h2>
+            <div class="section-description">
+                <span class="title">Cutting Edge 2019</span>
+                <span class="period">3rd place on 1st year category</span>
+                <span class="title">Hack19 - Flutter Hackathon</span>
+                <span class="period">1st place in Sri Lanka, 2nd Place in the World</span>
+                <span class="title">HashCode 2019</span>
+                <span class="period">5th place in Sri Lanka</span>
+            </div>
+        </section>
     </div>
 </div>
+
+<script src="../static/js/navbar.js"></script>
 </body>
 </html>
