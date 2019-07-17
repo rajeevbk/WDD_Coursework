@@ -12,6 +12,8 @@
 <header>
     <nav id="desktop-nav">
         <ul>
+            <li><a id="logo" class="active" href="javascript:void(0)"><i class="fas fa-globe-asia"></i> <i
+                    class="fas fa-plane-departure fa-lg"></i></a></li>
             <li><a href="../index.html">Home</a></li>
             <li><a href="../index.html#aboutUs">About Us</a></li>
             <li><a href="../index.html#quiz">Quiz</a></li>
@@ -21,8 +23,6 @@
                 <a href="javascript:void(0)">Meet the Team</a>
                 <div class="dropdown-content">
                     <a class="active" href="isala.html">Isala Piyarisi</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
                 </div>
             </li>
             <li><a href="../sitemap.html">Site Map</a></li>
@@ -31,8 +31,10 @@
         </ul>
     </nav>
     <nav id="mobile-nav">
-        <ul>
-            <li onclick="toggleMobileNavBar();"><i class="fas fa-bars text-white nav-right fa-lg"
+        <ul id="mobile-nav-menu">
+            <li><a id="logo" class="active" href="javascript:void(0)"><i class="fas fa-globe-asia"></i> <i
+                    class="fas fa-plane-departure fa-lg"></i></a></li>
+            <li onclick="toggleMobileNavBar();"><i class="fas fa-bars text-white nav-right fa-2x"
                                                    style="margin: 5px"></i></li>
         </ul>
         <ul id="mobile-nav-items" class="d-none">
@@ -45,8 +47,6 @@
                 <a href="javascript:void(0)">Meet the Team</a>
                 <div class="dropdown-content">
                     <a class="active" href="isala.html">Isala Piyarisi</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
                 </div>
             </li>
             <li><a href="sitemap.html">SiteMap</a></li>
@@ -55,7 +55,9 @@
         </ul>
     </nav>
 </header>
-
+<div class="scroll-to-top" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+</div>
 <div class="row">
     <div class="col-3">
         <img class="profile-pic" src="../static/img/profile-pictures/isala.jpg" alt="Profile Picture of Isala">

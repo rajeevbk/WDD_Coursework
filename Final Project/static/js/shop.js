@@ -48,7 +48,7 @@ function removeFromCart(id) {
     orderSubTotal -= parseFloat(btn.getAttribute('data-price')) * quantity;
     itemsInCart -= 1;
     updateTotal();
-    shoppingCart.remove({"name": btn.getAttribute('data-item-name'), "quantity": quantity, "price": btn.getAttribute('data-price') * quantity})
+    shoppingCart.splice({"name": btn.getAttribute('data-item-name'), "quantity": quantity, "price": btn.getAttribute('data-price') * quantity}, 1)
 }
 
 function updateTotal() {

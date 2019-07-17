@@ -8,7 +8,9 @@ label {
 .shop {
     margin: 50px;
 }
-
+h1{
+    margin: 40px 0 -25px 50px;
+}
 /***************/
 /***************/
 
@@ -87,6 +89,10 @@ label {
 
     .shop {
         margin: 5px;
+    }
+
+    h1{
+        margin: 20px 0 0 5px;
     }
 
     .checkout-button {

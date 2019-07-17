@@ -17,17 +17,24 @@
 <header>
     <nav id="desktop-nav">
         <ul>
+            <li><a id="logo" class="active" href="javascript:void(0)"><i class="fas fa-globe-asia"></i> <i
+                    class="fas fa-plane-departure fa-lg"></i></a></li>
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#aboutUs">About Us</a></li>
             <li><a href="index.html#quiz">Quiz</a></li>
             <li><a href="index.html#gallery">Galley</a></li>
-            <li><a class="active" href="shop.html">Store</a></li>
+            <li class="dropdown active">
+                <a href="javascript:void(0)">Store</a>
+                <div class="dropdown-content">
+                    <a href="#clothing">T-Shirts & Shirts</a>
+                    <a href="#mugs">Mugs</a>
+                    <a href="#paintings">Paintings</a>
+                </div>
+            </li>
             <li class="dropdown">
                 <a href="javascript:void(0)">Meet the Team</a>
                 <div class="dropdown-content">
                     <a href="CVs/isala.html">Isala Piyarisi</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
                 </div>
             </li>
             <li><a href="sitemap.html">Site Map</a></li>
@@ -36,8 +43,10 @@
         </ul>
     </nav>
     <nav id="mobile-nav">
-        <ul>
-            <li onclick="toggleMobileNavBar();"><i class="fas fa-bars text-white nav-right fa-lg"
+        <ul id="mobile-nav-menu">
+            <li><a id="logo" class="active" href="javascript:void(0)"><i class="fas fa-globe-asia"></i> <i
+                    class="fas fa-plane-departure fa-lg"></i></a></li>
+            <li onclick="toggleMobileNavBar();"><i class="fas fa-bars text-white nav-right fa-2x"
                                                    style="margin: 5px"></i></li>
         </ul>
         <ul id="mobile-nav-items" class="d-none">
@@ -50,8 +59,6 @@
                 <a href="javascript:void(0)">Meet the Team</a>
                 <div class="dropdown-content">
                     <a href="CVs/isala.html">Isala Piyarisi</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
                 </div>
             </li>
             <li><a href="sitemap.html">SiteMap</a></li>
@@ -60,11 +67,14 @@
         </ul>
     </nav>
 </header>
-
 <div class="checkout-button pointer" onclick="showCheckOut();">
-    <i class="fas fa-shopping-cart"></i>
+    <i class="fas fa-shopping-cart fa-2x"></i>
     <span id="items-in-cart"></span>
 </div>
+<div class="scroll-to-top" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+</div>
+<h1>Shop</h1>
 <div id="shop-wrapper">
     <section id="clothing" class="shop">
         <h2 class="section-title">T-Shirts & Shirts</h2>
@@ -222,7 +232,7 @@
 
         </div>
     </section>
-    <section id="mugs" class="shop">
+    <section id="paintings" class="shop">
         <h2 class="section-title">Paintings</h2>
         <div class="shop-items">
 
