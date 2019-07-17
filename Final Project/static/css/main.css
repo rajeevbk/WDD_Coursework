@@ -87,3 +87,21 @@
     flex-direction: row;
 }
 /* -------------- */
+
+
+footer {
+    margin-bottom: 0;
+    background-color: #212121;
+    padding-top: 7px;
+    height: 40px;
+    line-height: 40px;
+    color: #aaa;
+    text-align: center;
+    width: 100%;
+    vertical-align: middle !important;
+}
+
+footer a{
+    color: #ff7781;
+    text-decoration: none;
+}
