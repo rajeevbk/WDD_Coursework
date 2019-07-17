@@ -89,10 +89,69 @@
     <h2>Slider</h2>
 </section>
 
-<section>
+<section class="gallery">
+          <!-- The six images floating next to each other -->
+            <div class="img_bar">
+                <h2>Top 6 Cities to Visit</h2>
+                <div class="row">
+                      <div class="column"><!-- Image 1 -->
+                            <img src="static/img/gallery/colombo.jpg" alt="Colombo" title="Colombo is the commercial capital of Sri Lanka. It's a busy and a Vibrant place with a mixture of modern life and colonial buildings situated around the city. It is the best place to experience a luxury life along with food from all around the world and tons of entertainment." style="width:100%"; height="120" onmouseover="myFunction(this);" >
+                      </div>
+                      <div class="column"><!-- Image 2-->
+                            <img src="static/img/gallery/Kandy2.jpg" alt="Kandy" title="Last Successful Kingdom of Sri Lanka protected by the surrounding mountians is the best place to visit to experience the heritage and different cultures of Sri Lanka. The city is filled with its own secrets about the history of the last Kindom for you to explore. "style="width:100%" ; height="120" onmouseover="myFunction(this);">
+                      </div>
+                      <div class="column"><!-- Image 3 -->
+                            <img src="static/img/gallery/Anuradhapura4.jpg" alt="Anuradhapura"title="The first Kindom of Sri lanka has still been able to amaze us with its creations. The city is filled with mind-blowing constructions made with a technology still puzzles the world. Also filled with the history of Buddhism and its influence to art, is a must place to visit to see the true beauty of creations by man." style="width:100%"; height="120" onmouseover="myFunction(this);">
+                      </div>
+                      <div class="column"><!-- Image 4 -->
+                            <img src="static/img/gallery/galle2.jpg"alt="Galle" title="Located in the Southern Province this place carries its own history and beauty. It has been a special place through out history with its location in the Indian ocean. Filled with wonderfull beaches and ruins of history the place is the best experience many cultures and the ocean life." style="width:100%"; height="120" onmouseover="myFunction(this);">
+                      </div>
+                      <div class="column"><!-- Image 5 -->
+                            <img src="static/img/gallery/Nuwaraeliya.jpg" alt="Nuwara-Eliya" title="Located in the Central Province and been home to many wonderful Waterfalls this place is a paradise its self. Arriving here from a wonderful train journey to vitness the cold  weather on mountains covered by green and the finest tea in the world and to stay in a luxurious hotel with one of the finest views will be life lasting wonderful memory for you." style="width:100%"; height="120" onmouseover="myFunction(this);">
+                      </div>
+                            <div class="column"><!-- Image 6 -->
+                            <img src="static/img/gallery/Polonnaruwa.jpg" alt="Polonnaruwa" title="Polonnaruwa was the strongest Kingdom in Sri Lanka. The city is now filled with ancient ruins and constructions. Giving shelter to many migrating birds all around the world this ancient city is filled with bio-diversity. The poeple there will show you an amazing hospitality and culture". style="width:100%"; height="120" onmouseover="myFunction(this);">
+                      </div>
+                </div>
+                <div class="container">
+                     <div id="adjust"> 
+                        <table>
+                            <tr>
+                                <td><!-- Background color selection -->
+                                    <form>
+                                        <select id="BGColor" onchange="selectBackground()">
+                                          <option>Select Background</option>
+                                          <option value="#000033">Dark Blue</option>
+                                          <option value="#0099ff">Blue</option>
+                                          <option value="#4CAF50">Green</option>
+                                          <option value="#8484e1">Violet</option>
+                                        </select>      
+                                    </form>
+                                </td>
 
-</section>
-
+                                <td><!-- Text color selection -->
+                                    <form>
+                                      <select id="TxtColor" onchange="selectText()">
+                                          <option>Select Text</option>
+                                          <option value="#4d4dff">Blue</option>
+                                          <option value="#ff4d4d">Rose</option>
+                                          <option value="green">Green</option>
+                                          <option value="#FFFFFF">White</option>
+                                      </select>
+                                    </form>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- close icon -->
+                    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times; </span>
+                    <img id="expandedImg">
+                    <div id = "imgtext"></div>
+                    <div id = "imgdescription"></div>
+                </div>
+                <script type="text/javascript" src="static/js/gallery.js"></script>
+            </div>
+        </section>
 <section>
 
 </section>

@@ -1,39 +1,88 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 body {
-  margin: 0;
-  font-family: Arial;
+    margin: 0;
+    font-family: Arial;
 }
-.row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  padding: 0 4px;
+            
+.img_bar{
+    padding: 50px;
+    align-content: center;
 }
+
+/* The grid: six equal images that floats next to each other */
 .column {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
+    float: left;
+    width: 16.6%;
+    padding: 4px;
 }
+
+/* Style the images */
 .column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
-}
-@media screen and (max-width: 800px) {
-  .column {
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%;
+    opacity: 0.8; 
+    cursor: pointer;
   }
-}
-@media screen and (max-width: 600px) {
-  .column {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
+
+ .column img:hover {
+    opacity: 1;
   }
+
+ /* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+  background-color: "";
+  color: "";
+  
+  width: 98%;
+}
+
+#select1:checked~div.wrapper {
+  background-color: black;
+  color: white;
+}
+
+#imgdescription{
+    position: absolute;
+    top:4.6%;
+    left: 51%;
+    color: "";
+    font-size: 1.2em;
+    width: 50%;
+    height: 95.5%;
+    padding: 20px;
+    /*width: 25em;
+    word-wrap: break-word;*/
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 2%;
+  left: 1%;
+  color: white ;
+  font-size: 1.5em;
+}
+
+.closebtn {
+  position: absolute;
+  top: -1%;
+  right: -1.5%;
+              
+  font-size: 2em;
+  cursor: pointer;
+}
+
+#expandedImg{
+  width: 50%;
+  height: 500px;
 }
