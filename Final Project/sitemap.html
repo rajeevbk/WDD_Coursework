@@ -1,30 +1,175 @@
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="static/css/main.css">
+        <link rel="stylesheet" type="text/css" href="static/css/navbar.css">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <style>
-            .box1{
-            }
-            .home{
-                position: absolute;
+            #sitemap{
+                padding:inherit;
             }
         </style>
     </head>
 <body>
-    <svg  viewBox="0 0 460 667" fill="none" > 
+    <header>
+    <nav id="desktop-nav">
+        <ul>
+            <li><a id="logo" class="active" href="javascript:void(0)"><i class="fas fa-globe-asia"></i> <i
+                    class="fas fa-plane-departure fa-lg"></i></a></li>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="#aboutUs">About Us</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+            <li><a href="#gallery">Galley</a></li>
+            <li><a href="shop.html">Store</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Meet the Team</a>
+                <div class="dropdown-content">
+                    <a href="CVs/isala.html">Isala Piyarisi</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">Places to Visit</a>
+                <div class="dropdown-content">
+                    <a href="Places/sigiriya.html">Sigiriya</a>
+                </div>
+            </li>
+            <li><a href="sitemap.html">Site Map</a></li>
+            <li class="nav-right"><a onclick="changeGlobalFontSize(-0.1)">- Font Size</a></li>
+            <li class="nav-right"><a onclick="changeGlobalFontSize(0.1)">+ Font Size</a></li>
+        </ul>
+    </nav>
+    <nav id="mobile-nav">
+        <ul id="mobile-nav-menu">
+            <li><a id="logo" class="active" href="javascript:void(0)"><i class="fas fa-globe-asia"></i> <i
+                    class="fas fa-plane-departure fa-lg"></i></a></li>
+            <li onclick="toggleMobileNavBar();"><i class="fas fa-bars text-white nav-right fa-2x"
+                                                   style="margin: 5px"></i></li>
+        </ul>
+        <ul id="mobile-nav-items" class="d-none">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="#aboutUs">About Us</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+            <li><a href="#gallery">Galley</a></li>
+            <li><a href="shop.html">Store</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Meet the Team</a>
+                <div class="dropdown-content">
+                    <a href="CVs/isala.html">Isala Piyarisi</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">Places to Visit</a>
+                <div class="dropdown-content">
+                    <a href="Places/sigiriya.html">Sigiriya</a>
+                </div>
+            </li>
+            <li><a href="sitemap.html">SiteMap</a></li>
+            <li><a onclick="changeGlobalFontSize(0.1)">+ Font Size</a></li>
+            <li><a onclick="changeGlobalFontSize(-0.1)">- Font Size</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <div class="sitemap">
+        <h2>Site map</h2>
+    <svg  viewBox="-30 20 550 640" fill="none" > 
         
-        <line x1="52%" y1="50" x2="52%" y2="80" style="stroke:rgb(255,0,0);stroke-width:2" />
-        <line x1="12%" y1="80" x2="12%" y2="110" style="stroke:rgb(255,0,0);stroke-width:2" />
-        <line x1="37%" y1="80" x2="37%" y2="110" style="stroke:rgb(255,0,0);stroke-width:2" />
-        <line x1="65%" y1="80" x2="65%" y2="110" style="stroke:rgb(255,0,0);stroke-width:2" />
-        <line x1="89%" y1="80" x2="89%" y2="110" style="stroke:rgb(255,0,0);stroke-width:2" />
-        <line x1="12%" y1="80" x2="89%" y2="80" style="stroke:rgb(255,0,0);stroke-width:2" />
-        <rect x="45%" y="20"width="4em" height="2em" rx="12" fill="#292C74" stroke="#827B7B" stroke-width="3.5"/ id="box1"/> 
-        <rect x="30%" y="110"width="4em" height="2em" rx="12" fill="#292C74" stroke="#827B7B" stroke-width="3.5"/ id="box1"/> 
-        <rect x="58%" y="110" width="4em" height="2em" rx="12" fill="#292C74" stroke="#827B7B" stroke-width="3.5"/ id="box1"/> 
-        <rect x="82%" y="110"width="4em" height="2em" rx="12" fill="#292C74" stroke="#827B7B" stroke-width="3.5"/ id="box1"/> 
-        <rect x="5%" y="110"width="4em" height="2em" rx="12" fill="#292C74" stroke="#827B7B" stroke-width="3.5"/ id="box1"/>
-        <rect x="5%" y="110"width="4em" height="2em" rx="12" fill="#292C74" stroke="#827B7B" stroke-width="3.5"/ id="box1"/> 
-        <rect x="5%" y="110"width="4em" height="2em" rx="12" fill="#292C74" stroke="#827B7B" stroke-width="3.5"/ id="box1"/> 
+       <!-- lines -->
+        <line x1="12.5%" y1="69" x2="12.5%" y2="458" style="stroke:rgb(0, 102, 102); stroke-width:2" />
+        <line x1="27.5%" y1="258" x2="27.5%" y2="418" style="stroke:rgb(0, 102, 102); stroke-width:2" />
+        <line x1="27.5%" y1="458" x2="27.5%" y2="618" style="stroke:rgb(0, 102, 102); stroke-width:2" />
+        <line x1="12.4%" y1="258" x2="24%" y2="258" style="stroke:rgb(0, 102, 102);stroke-width:2" />
+        <line x1="12.4%" y1="218" x2="24%" y2="218" style="stroke:rgb(0, 102, 102);stroke-width:2" />
+        <line x1="12.4%" y1="178" x2="24%" y2="178" style="stroke:rgb(0, 102, 102);stroke-width:2" />
+        <line x1="12.4%" y1="138" x2="24%" y2="138" style="stroke:rgb(0, 102, 102);stroke-width:2" /> 
+        <line x1="12.4%" y1="98" x2="24%" y2="98" style="stroke:rgb(0, 102, 102);stroke-width:2" />
+        <line x1="12.5%" y1="458" x2="24%" y2="458" style="stroke:rgb(0, 102, 102);stroke-width:2" />
+        <line x1="27.5%" y1="498" x2="38%" y2="498" style="stroke:rgb(0, 102, 102);stroke-width:2" />
+        <line x1="27.5%" y1="538" x2="38%" y2="538" style="stroke:rgb(0, 102, 102);stroke-width:2" />
+        <line x1="27.5%" y1="578" x2="38%" y2="578" style="stroke:rgb(0, 102, 102);stroke-width:2" />
+        <line x1="27.35%" y1="618" x2="38%" y2="618" style="stroke:rgb(0, 102, 102);stroke-width:2" />
+        <line x1="27.35%" y1="418" x2="38%" y2="418" style="stroke:rgb(0, 102, 102);stroke-width:2" />
+        <line x1="27.5%" y1="378" x2="38%" y2="378" style="stroke:rgb(0, 102, 102);stroke-width:2" />
+        <line x1="27.5%" y1="338" x2="38%" y2="338" style="stroke:rgb(0, 102, 102);stroke-width:2" />
+        <line x1="27.5%" y1="298" x2="38%" y2="298" style="stroke:rgb(0, 102, 102);stroke-width:2" />
+        
+        <!--boxes -->
+        <g> <a href="aboutUs.html">
+            <rect x="20%" y=90 width="50px" height="16px" rx="5" fill="#003366" stroke="#827B7B" stroke-width="2"/ id="box1"/>
+            <text x="20.8%" y="102" font-size="11px" fill = "white">About us</text>
+            </a>
+        </g>
+        <g> <a href="index.html#gallery">
+            <rect x="20%" y="130" width="50px" height="16px" rx="5" fill="#003366" stroke="#827B7B" stroke-width="2"/ id="box1"/>
+            <text x="21%" y="142" font-size="11px" fill = "white">Gallery</text></a>
+        </g>
+        <g> <a href="quiz.html">
+            <rect x="20%" y="170" width="50px" height="16px" rx="5" fill="#003366" stroke="#827B7B" stroke-width="2"/ id="box1"/>
+            <text x="21%" y="182" font-size="11px" fill = "white">Quiz</text></a>
+        </g>
+        <g> <a href="shop.html">
+            <rect x="20%" y="210" width="50px" height="16px" rx="5" fill="#003366" stroke="#827B7B" stroke-width="2"/ id="box1"/>
+            <text x="21%" y="222" font-size="11px" fill = "white">Shop</text></a>
+        </g>
+        <g> <a href="index.html#places">
+            <rect x="20%" y="250" width="80px" height="16px" rx="5" fill="#003366" stroke="#827B7B" stroke-width="2"/ id="box1"/>
+            <text x="21%" y="262" font-size="11px" fill = "white">Places To Visit</text>
+            </a>
+        </g>
+        <g> <a href="Places/sigiriya.html">
+            <rect x="38%" y="290" width="60px" height="16px" rx="5" fill="#292C74" stroke="#827B7B" stroke-width="2"/ id="box1"/>
+            <text x="39%" y="302" font-size="11px" fill = "white">Sigiriya</text>
+            </a>
+        </g>
+        <g> <a href="Places/ella.html">
+            <rect x="38%" y="330" width="60px" height="16px" rx="5" fill="#292C74" stroke="#827B7B" stroke-width="2"/ id="box1"/>
+            <text x="39%" y="342" font-size="11px" fill = "white">Ella</text></a>
+        </g>
+        <g>
+            <rect x="38%" y="370" width="60px" height="16px" rx="5" fill="#292C74" stroke="#827B7B" stroke-width="2"/ id="box1"/>
+            <text x="38.5%" y="382" font-size="11px" fill = "white">Unawatuna</text>
+        </g>
+        <g> <a href="Places/unavatuna.html">
+            <rect x="38%" y="410" width="60px" height="16px" rx="5" fill="#292C74" stroke="#827B7B" stroke-width="2"/ id="box1"/>
+            <text x="38.5%" y="422" font-size="11px" fill = "white">Unawatuna</text></a>
+        </g>
+        <g> <a href="#">
+            <rect x="20%" y="450" width="80px" height="16px" rx="5" fill="#003366" stroke="#827B7B" stroke-width="2"/ id="box1"/>
+            <text x="21%" y="462" font-size="11px" fill = "white">Meet The Team</text></a>
+        </g>
+        <g><a href="CVs/isala.html">
+            <rect x="38%" y="490" width="60px" height="16px" rx="5" fill="#292C74" stroke="#827B7B" stroke-width="2"/ id="box1"/>
+            <text x="39%" y="502" font-size="11px" fill = "white">Isala</text>
+            </a>
+        </g>
+        <g><a href="CVs/rahma.html">
+            <rect x="38%" y="530" width="60px" height="16px" rx="5" fill="#292C74" stroke="#827B7B" stroke-width="2"/ id="box1"/>
+            <text x="39%" y="542" font-size="11px" fill = "white">Rahma</text></a>
+        </g>
+        <g> <a href="CVs/rajeeve.html">
+            <rect x="38%" y="570" width="60px" height="16px" rx="5" fill="#292C74" stroke="#827B7B" stroke-width="2"/ id="box1"/>
+            <text x="39%" y="582" font-size="11px" fill = "white">Rajeeve</text>
+            </a>
+        </g>
+        <g> <a href="CVs/kevin.html">
+            <rect x="38%" y="610" width="60px" height="16px" rx="5" fill="#292C74" stroke="#827B7B" stroke-width="2"/ id="box1"/>
+            <text x="39%" y="622" font-size="11px" fill = "white">Kevin</text>
+            </a>
+        </g>
+        <g> <a href="index.html">
+            <rect x="8%" y="50"width="50px" height="19px" rx="4" fill="#009933" stroke="#262626" stroke-width="1.5"/ id="box1"/>
+            <text x="9.8%" y="63" font-size="13px" fill = "#FFFFFF">Home</text>
+            </a>
+        </g>
+        
     </svg>
-    <span id="home">Home Page</span>
+    </div>
 </body>
+<footer>
+</footer>
+    <script src="static/js/main.js"></script>
+    <script src="static/js/navbar.js"></script>
 </html>
