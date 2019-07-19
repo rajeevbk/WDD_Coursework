@@ -1,286 +1,301 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Quiz</title>
     <style media="screen">
-      body{
-          font-size: 20px;
-          font-family: 'Work Sans', sans-serif;
-          color: #333;
-          font-weight: 300;
-          text-align: center;
-          background-color: #f8f6f0;
-      }
-      h1{
-        font-weight: 300;
-        margin: 0px;
-        padding: 10px;
-        font-size: 20px;
-        background-color: #444;
-        color: #fff;
-      }
-      h2{
-        font-weight: 300;
-        margin: 0px;
-        padding: 10px;
-        font-size: 25px;
+        body {
+            font-size: 20px;
+            font-family: 'Work Sans', sans-serif;
+            color: #333;
+            font-weight: 300;
+            text-align: center;
+            background-color: #f8f6f0;
+        }
 
-      }
-      #quiz-container{
-        position: relative;
-        height: 750px;
-        margin-top: 40px;
-        text-align: center;
-        border-style: solid;
-        border-width: 5px;
+        h1 {
+            font-weight: 300;
+            margin: 0px;
+            padding: 10px;
+            font-size: 20px;
+            background-color: #444;
+            color: #fff;
+        }
 
-              }
-      #timer{
-        font-size: 24px;
+        h2 {
+            font-weight: 300;
+            margin: 0px;
+            padding: 10px;
+            font-size: 25px;
 
-        margin-top: 40px;
-      }
-      #result-container{
-        position: relative;
-        height: 40px;
-        margin-top: 40px;
-       }
-      button{
-           font-family: 'Work Sans', sans-serif;
-           font-size: 18px;
-           background-color: #279;
-           color: #fff;
-           border: 0px;
-           border-radius: 3px;
-           padding: 20px;
-           cursor: pointer;
-           margin-bottom: 20px;
-           float:inherit;
-       }
-      button:hover{
-           background-color: #38a;
-       }
+        }
+
+        #quiz-container {
+            position: relative;
+            height: 750px;
+            margin-top: 40px;
+            text-align: center;
+            border-style: solid;
+            border-width: 5px;
+
+        }
+
+        #timer {
+            font-size: 24px;
+
+            margin-top: 40px;
+        }
+
+        #result-container {
+            position: relative;
+            height: 40px;
+            margin-top: 40px;
+        }
+
+        button {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 18px;
+            background-color: #279;
+            color: #fff;
+            border: 0px;
+            border-radius: 3px;
+            padding: 20px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            float: inherit;
+        }
+
+        button:hover {
+            background-color: #38a;
+        }
     </style>
     <link rel="stylesheet" type="text/css" href="static/css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
 
-  </head>
-  <body>
+</head>
+<body>
 
-    <header>
-        <nav id="desktop-nav">
-            <ul>
-                <li><a id="logo" class="active" href="javascript:void(0)"><i class="fas fa-globe-asia"></i> <i
-                        class="fas fa-plane-departure fa-lg"></i></a></li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#aboutUs">About Us</a></li>
-                <li><a class="active" href="quiz.html">Quiz</a></li>
-                <li><a href="#gallery">Galley</a></li>
-                <li><a href="shop.html">Store</a></li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Meet the Team</a>
-                    <div class="dropdown-content">
-                        <a href="CVs/isala.html">Isala Piyarisi</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)">Places to Visit</a>
-                    <div class="dropdown-content">
-                        <a href="Places/sigiriya.html">Sigiriya</a>
-                    </div>
-                </li>
-                <li><a href="sitemap.html">Site Map</a></li>
-                <li class="nav-right"><a onclick="changeGlobalFontSize(-0.1)">- Font Size</a></li>
-                <li class="nav-right"><a onclick="changeGlobalFontSize(0.1)">+ Font Size</a></li>
-            </ul>
-        </nav>
-        <nav id="mobile-nav">
-            <ul id="mobile-nav-menu">
-                <li><a id="logo" class="active" href="javascript:void(0)"><i class="fas fa-globe-asia"></i> <i
-                        class="fas fa-plane-departure fa-lg"></i></a></li>
-                <li onclick="toggleMobileNavBar();"><i class="fas fa-bars text-white nav-right fa-2x"
-                                                       style="margin: 5px"></i></li>
-            </ul>
-            <ul id="mobile-nav-items" class="d-none">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#aboutUs">About Us</a></li>
-                <li><a class="active" href="quiz.html">Quiz</a></li>
-                <li><a href="#gallery">Galley</a></li>
-                <li><a href="shop.html">Store</a></li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Meet the Team</a>
-                    <div class="dropdown-content">
-                        <a href="CVs/isala.html">Isala Piyarisi</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)">Places to Visit</a>
-                    <div class="dropdown-content">
-                        <a href="Places/sigiriya.html">Sigiriya</a>
-                    </div>
-                </li>
-                <li><a href="sitemap.html">SiteMap</a></li>
-                <li><a onclick="changeGlobalFontSize(0.1)">+ Font Size</a></li>
-                <li><a onclick="changeGlobalFontSize(-0.1)">- Font Size</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <nav id="desktop-nav">
+        <ul>
+            <li><a id="logo" class="active" href="javascript:void(0)"><i class="fas fa-globe-asia"></i> <i
+                    class="fas fa-plane-departure fa-lg"></i></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#aboutUs">About Us</a></li>
+            <li><a class="active" href="quiz.html">Quiz</a></li>
+            <li><a href="#gallery">Galley</a></li>
+            <li><a href="shop.html">Store</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Meet the Team</a>
+                <div class="dropdown-content">
+                    <a href="CVs/isala.html">Isala Piyarisi</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">Places to Visit</a>
+                <div class="dropdown-content">
+                    <a href="Places/ellaRock.html">Ella Rock</a>
+                </div>
+            </li>
+            <li><a href="sitemap.html">Site Map</a></li>
+            <li class="nav-right"><a onclick="changeGlobalFontSize(-0.1)">- Font Size</a></li>
+            <li class="nav-right"><a onclick="changeGlobalFontSize(0.1)">+ Font Size</a></li>
+        </ul>
+    </nav>
+    <nav id="mobile-nav">
+        <ul id="mobile-nav-menu">
+            <li><a id="logo" class="active" href="javascript:void(0)"><i class="fas fa-globe-asia"></i> <i
+                    class="fas fa-plane-departure fa-lg"></i></a></li>
+            <li onclick="toggleMobileNavBar();"><i class="fas fa-bars text-white nav-right fa-2x"
+                                                   style="margin: 5px"></i></li>
+        </ul>
+        <ul id="mobile-nav-items" class="d-none">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#aboutUs">About Us</a></li>
+            <li><a class="active" href="quiz.html">Quiz</a></li>
+            <li><a href="#gallery">Galley</a></li>
+            <li><a href="shop.html">Store</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Meet the Team</a>
+                <div class="dropdown-content">
+                    <a href="CVs/isala.html">Isala Piyarisi</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">Places to Visit</a>
+                <div class="dropdown-content">
+                    <a href="Places/ellaRock.html">Ella Rock</a>
+                </div>
+            </li>
+            <li><a href="sitemap.html">SiteMap</a></li>
+            <li><a onclick="changeGlobalFontSize(0.1)">+ Font Size</a></li>
+            <li><a onclick="changeGlobalFontSize(-0.1)">- Font Size</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <h1>Quiz on Sri Lanka</h1>
-    <div id="timer"></div>
-    <div id="quiz-container">
-      <div id="radios"></div>
-    </div>
-    <div id="result-container"></div>
+<h1>Quiz on Sri Lanka</h1>
+<div id="timer"></div>
+<div id="quiz-container">
+    <div id="radios"></div>
+</div>
+<div id="result-container"></div>
 
-    <script type="text/javascript">
+<script type="text/javascript">
 
-     //Global variables
+    //Global variables
     var clock = document.getElementById("timer");
     var quiz = document.getElementById("quiz-container");
     var result = document.getElementById("result-container");
     var radios = document.getElementById("radios");
 
 
-      var secs = 0, pos = 0, quiz, T, result, question, choice, choices, chA, chB, chC, correct = 0, wrong = 0, score = 0;
-      var t = 0;
-      var correctQuestions = [];
-      var wrongQuestions = [];
-      var questions = [
-        ["What is the name of the famous Sri Lankan kingdom which was built on a huge rock?","Anuradhapura" , "Sigirya", "Polonnaruwa", "B"],
-        ["What is the most popluar beach in Sri Lanka for whale watching?","Hikkaduwa","Trincomalee","Mirissa","C"],
+    var secs = 0, pos = 0, quiz, T, result, question, choice, choices, chA, chB, chC, correct = 0, wrong = 0, score = 0;
+    var t = 0;
+    var correctQuestions = [];
+    var wrongQuestions = [];
+    var questions = [
+        ["What is the name of the famous Sri Lankan kingdom which was built on a huge rock?", "Anuradhapura", "Sigirya", "Polonnaruwa", "B"],
+        ["What is the most popluar beach in Sri Lanka for whale watching?", "Hikkaduwa", "Trincomalee", "Mirissa", "C"],
         ["Sri Lankans are famously known for", "Their rudeness", "Their hospitality", "Their generosity", "B"],
         ["The national animal in Sri Lanka is", "The jungle foul", "The Peacock", "The Elephant", "A"],
-        ["The famous forest in Sri Lanka which has a massive bio diversity is", "Sinharaja", "Yala","Ritigala", "A"],
+        ["The famous forest in Sri Lanka which has a massive bio diversity is", "Sinharaja", "Yala", "Ritigala", "A"],
         ["The famous sport in Sri Lanka which can often be seen played by children on Sri Lankan streets is", "Football", "Cricket", "Baseball", "B"],
         ["The precious \"Temple of the Tooth\" is located in", "Colombo", "Galle", "Kandy", "C"],
         ["What is considered as the staple food in Sri Lanka?", "Naan and Curry", "Bread and Curry", "Rice and Curry", "C"],
         ["The southern most district in Sri Lanka is", "Matara", "Galle", "Hambantota", "A"],
-        ["Sri Lanka is Knows as the \"Pearl of the Indian Ocean\" because","There are a lot of pearls found in Sri Lanka","Sri Lanka looks like a pearl in the world map","Sri Lanka was formally known as Pearl Island","B"]];
+        ["Sri Lanka is Knows as the \"Pearl of the Indian Ocean\" because", "There are a lot of pearls found in Sri Lanka", "Sri Lanka looks like a pearl in the world map", "Sri Lanka was formally known as Pearl Island", "B"]];
 
-      function countDown(secs){
+    function countDown(secs) {
 
         //function passed into setInterval() keeps running every second.
-        var T = setInterval(function() {
-          secs--;
-          t = 90 - secs;
-          update();
-          if (secs < 1) {
-            clock.style.display = 'none';
-            console.log(secs);
-            clearInterval(T);
-          }
+        var T = setInterval(function () {
+            secs--;
+            t = 90 - secs;
+            update();
+            if (secs < 1) {
+                clock.style.display = 'none';
+                console.log(secs);
+                clearInterval(T);
+            }
         }, 1000);
+
         function update() {
 
-          if (secs > 0) {
-          clock.innerHTML = "Time remaining :  " + secs + " seconds";
+            if (secs > 0) {
+                clock.innerHTML = "Time remaining :  " + secs + " seconds";
+            } else {
+
+                if (score > 15) {
+                    quiz.style.backgroundColor = "lightblue";
+                } else if (score > 10 && score < 15) {
+                    quiz.style.backgroundColor = "green";
+                } else {
+                    quiz.style.backgroundColor = "red";
+                }
+
+                quiz.innerHTML = "<h2>Your score =  " + score;
+                quiz.innerHTML += "<h2>You got " + correct + " of " + questions.length + " questions correct in 90 seconds </h2>";
+
+                quiz.innerHTML += "<h2><u>Questions you got right:  ";
+                for (var i = 0; i < correctQuestions.length; i++)
+                    quiz.innerHTML += "<p>" + correctQuestions[i] + "</p>";
+
+                quiz.innerHTML += "<h2><u>Questions you got wrong:  ";
+                for (var i = 0; i < wrongQuestions.length; i++)
+                    quiz.innerHTML += "<p>" + wrongQuestions[i] + "</p>";
+
+                result.innerHTML = "quiz completed";
+                // resets the variable to allow users to restart the quiz
+                pos = 0;
+                correct = 0;
+                // stops rest of renderQuestion function running when quiz is completed
+                return false;
+
+            }
         }
-          else {
 
-            if(score > 15){  quiz.style.backgroundColor = "lightblue"; }
-            else if (score > 10 && score < 15 ) {quiz.style.backgroundColor = "green";}
-            else {quiz.style.backgroundColor = "red";}
-
-              quiz.innerHTML = "<h2>Your score =  " + score;
-              quiz.innerHTML += "<h2>You got "+correct+" of "+questions.length+" questions correct in 90 seconds </h2>";
-
-              quiz.innerHTML += "<h2><u>Questions you got right:  ";
-              for(var i=0; i < correctQuestions.length; i++)
-                quiz.innerHTML += "<p>"+correctQuestions[i]+"</p>";
-
-              quiz.innerHTML += "<h2><u>Questions you got wrong:  ";
-              for(var i=0; i < wrongQuestions.length; i++)
-                quiz.innerHTML += "<p>"+wrongQuestions[i]+"</p>";
-
-              result.innerHTML = "quiz completed";
-              // resets the variable to allow users to restart the quiz
-              pos = 0;
-              correct = 0;
-              // stops rest of renderQuestion function running when quiz is completed
-              return false;
-
-          }
-        }
         update();
-      }
+    }
 
-      countDown(90);
+    countDown(90);
 
 
-      function renderQuestion(){
+    function renderQuestion() {
 
         // wanna do if this or secs == 0
-        if(pos >= questions.length ){
+        if (pos >= questions.length) {
 
-          if(score > 15){  quiz.style.backgroundColor = "lightblue"; }
-          else if (score > 10 && score < 15 ) {quiz.style.backgroundColor = "green";}
-          else {quiz.style.backgroundColor = "red";}
+            if (score > 15) {
+                quiz.style.backgroundColor = "lightblue";
+            } else if (score > 10 && score < 15) {
+                quiz.style.backgroundColor = "green";
+            } else {
+                quiz.style.backgroundColor = "red";
+            }
 
-          clock.style.display = 'none';
-          quiz.innerHTML = "<h2>Your score =  " + score;
-          quiz.innerHTML += "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>" + "in " + t + " seconds";
-          quiz.innerHTML += "<h2><u>Questions you got right:  ";
-          for(var i=0; i < correctQuestions.length; i++)
-            quiz.innerHTML += "<p>"+correctQuestions[i]+"</p>";
+            clock.style.display = 'none';
+            quiz.innerHTML = "<h2>Your score =  " + score;
+            quiz.innerHTML += "<h2>You got " + correct + " of " + questions.length + " questions correct</h2>" + "in " + t + " seconds";
+            quiz.innerHTML += "<h2><u>Questions you got right:  ";
+            for (var i = 0; i < correctQuestions.length; i++)
+                quiz.innerHTML += "<p>" + correctQuestions[i] + "</p>";
 
-          quiz.innerHTML += "<h2><u>Questions you got wrong:  ";
-          for(var i=0; i < wrongQuestions.length; i++)
-            quiz.innerHTML += "<p>"+wrongQuestions[i]+"</p>";
+            quiz.innerHTML += "<h2><u>Questions you got wrong:  ";
+            for (var i = 0; i < wrongQuestions.length; i++)
+                quiz.innerHTML += "<p>" + wrongQuestions[i] + "</p>";
 
 
-          result.innerHTML = "quiz completed";
-          // resets the variable to allow users to restart the quiz
-          pos = 0;
-          correct = 0;
-          //clearInterval(T);
-          // stops rest of renderQuestion function running when quiz is completed
-          return false;
+            result.innerHTML = "quiz completed";
+            // resets the variable to allow users to restart the quiz
+            pos = 0;
+            correct = 0;
+            //clearInterval(T);
+            // stops rest of renderQuestion function running when quiz is completed
+            return false;
         }
-        result.innerHTML = "Question "+(pos+1)+" of "+questions.length;
+        result.innerHTML = "Question " + (pos + 1) + " of " + questions.length;
         question = questions[pos][0];
         chA = questions[pos][1];
         chB = questions[pos][2];
         chC = questions[pos][3];
-        quiz.innerHTML = "<h2>"+question+"</h2>";
+        quiz.innerHTML = "<h2>" + question + "</h2>";
         // the += appends to the data we started on the line above
-        quiz.innerHTML += "<input type='radio' name='choices' value='A'> "+chA+"<br>";
-        quiz.innerHTML += "<input type='radio' name='choices' value='B'> "+chB+"<br>";
-        quiz.innerHTML += "<input type='radio' name='choices' value='C'> "+chC+"<br><br>";
+        quiz.innerHTML += "<input type='radio' name='choices' value='A'> " + chA + "<br>";
+        quiz.innerHTML += "<input type='radio' name='choices' value='B'> " + chB + "<br>";
+        quiz.innerHTML += "<input type='radio' name='choices' value='C'> " + chC + "<br><br>";
         quiz.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
-      }
+    }
 
-      function checkAnswer(){
+    function checkAnswer() {
         // use getElementsByName because we have an array which it will loop through
         choices = document.getElementsByName("choices");
-        for(var i=0; i<choices.length; i++){
-          if(choices[i].checked){
-            choice = choices[i].value;
-          }
+        for (var i = 0; i < choices.length; i++) {
+            if (choices[i].checked) {
+                choice = choices[i].value;
+            }
         }
         // checks if answer matches the correct choice
-        if(choice == questions[pos][4]){
-          //each time there is a correct answer this value increases
-          correct++;
-          score = score + 2;
-          correctQuestions.push(question);
-        }
-        else {
-          wrong++;
-          score = score - 1;
-          wrongQuestions.push(question);
+        if (choice == questions[pos][4]) {
+            //each time there is a correct answer this value increases
+            correct++;
+            score = score + 2;
+            correctQuestions.push(question);
+        } else {
+            wrong++;
+            score = score - 1;
+            wrongQuestions.push(question);
         }
         // changes position of which character user is on
         pos++;
         // then the renderQuestion function runs again to go to next question
         renderQuestion();
-      }
+    }
 
-      window.addEventListener("load", renderQuestion, false);
+    window.addEventListener("load", renderQuestion, false);
 
 
-    </script>
-    <script src="static/js/navbar.js"></script>
-  </body>
+</script>
+<script src="static/js/navbar.js"></script>
+</body>
 </html>

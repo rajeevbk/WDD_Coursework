@@ -1,9 +1,10 @@
-body{
-    font-size: 1.2rem;
-}
+/*body{*/
+/*    font-size: 1.2rem;*/
+/*}*/
 .row{
     display: flex;
     flex-direction: row;
+    font-size: 1.2rem;
 }
 
 .col-3{
