@@ -7,14 +7,13 @@
     font-size: 1.2rem;
 }
 
-.col-3{
+#sidebar{
     font-size: 1.5rem;
     width: 20%;
 }
-.col-9{
-    margin-top: 20px;
-    width: 70%;
-    margin-left: 10px;
+#main-container{
+    width: calc(80% - 20px);
+    margin: 20px 10px 0 10px;
     overflow: hidden;
 }
 
@@ -27,6 +26,7 @@
 .contacts{
     margin: 50px 10px 50px 30px;
     width: 100%;
+    overflow-x:auto;
 }
 
 .contacts table{
@@ -68,4 +68,27 @@
 
 .skills-wrapper{
     margin-left: 20px;
+}
+
+.hide{
+    display: none;
+}
+
+@media (max-width: 940px) {
+    .col-3{
+        display: none;
+    }
+    .col-9{
+        margin: 5px;
+        width: 100%;
+    }
+    .contacts{
+        margin: 50px 0 50px 0;
+    }
+    .hide{
+        display: block;
+    }
+    .section-description{
+        text-align: left;
+    }
 }
