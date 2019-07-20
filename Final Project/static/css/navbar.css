@@ -7,16 +7,6 @@
     float: left;
 }
 
-@media (max-width: 667px) {
-    #mobile-nav {
-        display: block;
-    }
-
-    #desktop-nav {
-        display: none;
-    }
-}
-
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -28,6 +18,7 @@ nav ul {
 nav ul li {
     float: left;
 }
+
 
 nav ul li a {
     display: block;
@@ -41,9 +32,9 @@ nav ul li a {
     display: none;
 }
 
-/*#mobile-nav-menu ul li:nth-child(2){*/
-/*    float: right;*/
-/*}*/
+#mobile-nav ul li {
+    float: none;
+}
 
 #mobile-nav .dropdown-content {
     width: 100%;
@@ -101,4 +92,14 @@ li.dropdown {
     cursor: pointer;
     border-radius: 50%;
     padding: 15px;
+}
+
+@media (max-width: 667px) {
+    #mobile-nav {
+        display: block;
+    }
+
+    #desktop-nav {
+        display: none;
+    }
 }
