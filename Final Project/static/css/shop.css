@@ -8,9 +8,11 @@ label {
 .shop {
     margin: 50px;
 }
-h1{
+
+h1 {
     margin: 40px 0 -25px 50px;
 }
+
 /***************/
 /***************/
 
@@ -45,7 +47,7 @@ h1{
     width: 98%;
 }
 
-.price-container input[type=number]{
+.price-container input[type=number] {
     width: 30px;
 }
 
@@ -55,6 +57,7 @@ h1{
     /*line-height: 28px;*/
     font-weight: bold;
 }
+
 .item-price {
     font-size: 1.3em;
     line-height: 28px;
@@ -91,7 +94,7 @@ h1{
         margin: 5px;
     }
 
-    h1{
+    h1 {
         margin: 20px 0 0 5px;
     }
 
@@ -130,7 +133,7 @@ h1{
     margin-bottom: 40px;
 }
 
-.bill-header{
+.bill-header {
     margin-bottom: 40px;
 }
 
@@ -218,23 +221,6 @@ button[type=submit] {
 
 /********************/
 /********************/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Add To Cart Animation */
