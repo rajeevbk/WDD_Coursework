@@ -1,15 +1,62 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
+    <link rel="stylesheet" type="text/css" href="../static/css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="../static/fontawesome/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="../static/css/main.css">
-    <link rel="stylesheet" type="text/css" href="../static/css/navbar.css">
-    <link rel="stylesheet" type="text/css" href="../static/fontawesome/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="../static/css/ellaRock.css">
-    <title>Ella Rock</title>
+<style>
+
+.item1 { grid-area: left;
+   background-image: url(../static/img/unawatuna/surfing.jpg)} 
+.item2 { grid-area: main; 
+   height: 550px;
+    background-color: #333333;
+    opacity: 0.9;
+    color: white;
+    }
+.item3 { grid-area: right;
+    background-image: url(../static/img/unawatuna/Unawatuna5-Palm.jpg)}
+
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    
+    'left left main main right right'
+    'left left main main right right';
+  grid-gap: 10px;
+  
+  padding: 0px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+    
+    p{  position: sticky;
+        
+        padding: 10px;
+        font-size: 22px;
+        text-align: center;
+        width: 300px;
+       left:36%;
+    }
+   article{
+       position: relative;
+        bottom:-480px;
+       background-color: aquamarine;
+       padding: 15px;
+       font-size: 24px;
+    }
+    
+    
+</style>
 </head>
 <body>
 <header>
@@ -17,13 +64,13 @@
         <ul>
             <li><a id="logo" class="active" href="javascript:void(0)"><i class="fas fa-globe-asia"></i> <i
                     class="fas fa-plane-departure fa-lg"></i></a></li>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../index.html#aboutUs">About Us</a></li>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="../aboutUs.html">About Us</a></li>
             <li><a href="../quiz.html">Quiz</a></li>
-            <li><a href="../index.html#gallery">Galley</a></li>
+            <li><a href="../index.html">Galley</a></li>
             <li><a href="../shop.html">Store</a></li>
             <li class="dropdown">
-                <a href="javascript:void(0)">Meet the Team</a>
+                <a href="javascript:void(0)" class="dropbtn">Meet the Team</a>
                 <div class="dropdown-content">
                     <a href="../CVs/isala.html">Isala Piyarisi</a>
                     <a href="../CVs/kevin.html">Kevin Kularathne</a>
@@ -31,7 +78,7 @@
                     <a href="../CVs/rahma.html">rahma</a>
                 </div>
             </li>
-            <li class="dropdown active">
+            <li class="dropdown">
                 <a href="javascript:void(0)">Places to Visit</a>
                 <div class="dropdown-content">
                     <a href="ellaRock.html">Ella Rock</a>
@@ -53,13 +100,13 @@
                                                    style="margin: 5px"></i></li>
         </ul>
         <ul id="mobile-nav-items" class="d-none">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../index.html#aboutUs">About Us</a></li>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="../aboutUs.html">About Us</a></li>
             <li><a href="../quiz.html">Quiz</a></li>
-            <li><a href="../index.html#gallery">Galley</a></li>
+            <li><a href="../index.html">Galley</a></li>
             <li><a href="../shop.html">Store</a></li>
             <li class="dropdown">
-                <a href="javascript:void(0)">Meet the Team</a>
+                <a href="javascript:void(0)" class="dropbtn">Meet the Team</a>
                 <div class="dropdown-content">
                     <a href="../CVs/isala.html">Isala Piyarisi</a>
                     <a href="../CVs/kevin.html">Kevin Kularathne</a>
@@ -68,10 +115,12 @@
                 </div>
             </li>
             <li class="dropdown">
-                <a class="active" href="javascript:void(0)">Places to Visit</a>
+                <a href="javascript:void(0)">Places to Visit</a>
                 <div class="dropdown-content">
-                    <a href="../Places/ellaRock.html">Ella Rock</a>
-                    <a href="../Places/sigiriya.html">Sigiriya</a>
+                    <a href="ellaRock.html">Ella Rock</a>
+                    <a href="unawatuna.html">Unawatuna</a>
+                    <a href="sigiriya.html">Sigiriya</a>
+                    <a href="sigiriya.html">Sigiriya</a>
                 </div>
             </li>
             <li><a href="../sitemap.html">SiteMap</a></li>
@@ -80,45 +129,20 @@
         </ul>
     </nav>
 </header>
-<section>
-    <div class="left-info">
-        <span class="elevation">elevation</span>
-        <div class="elevation-level">
-            <span id="height">1041m</span>
-            <span>Above Sea Level</span>
-        </div>
-    </div>
-    <div class="description">
-        <img src="../static/img/ella/darker-trekkers-logo-10th.png" alt="Trekker Logo">
-        <div>
-            <p>
-                If you love living green, then Ella is obviously a place to visit. Ella Rock is one of the place which
-                proves it. Trekkers would love the place. It’s bit tiring to do the hiking. But it is definitely worth
-                it.
-                Once you got to the summit you will realize why we said so. The panoramic views it provides with mist
-                and
-                cloud covering the area, especially in the early mornings and the late evenings are something you should
-                witness and that would suffice enough to say that you visited Ella.
-            </p>
-            <p>
-                Total time for climbing up and down is 4 hours. Yes, sounds like a long journey. But the way up there is
-                with full of diversity. If you are starting form Ella train station, you would enjoy the rail walk, and
-                soon
-                as you started climbing up, you will be passing a waterfall, the rubber tree forest and tea plantations.
-                On
-                a rainy day, it can be slippery, so better be cautious with what you wear for the journey. Wear
-                something
-                suitable for a hiking and towards the end of the hike, route will get bit harder with the steep, still
-                manageable.
-            </p>
-        </div>
-       <h1>Ella Rock</h1>
-    </div>
-</section>
-<footer>
-    Made with <i class="fas fa-heart text-danger"></i> from <a href="CVs/isala.html">Isala Piyarisi</a> - 2018421
-</footer>
 
-<script src="../static/js/navbar.js"></script>
+
+<div class="grid-container">
+  
+  <div class="item1"><article>Surfing</article></div>
+  <div class="item2">
+    <h2>Unawatuna</h2><hr>
+      <br>
+      <p>This coastal town located in Galle is a famous tourist attraction in Sri lanka. Unawatuna is rich in its biodiversity. The town is filled with entertainment, everywhere you go you will find many ways to enjoy the stay. the place is also famous for its jungle beach, the corals and surfing. If you want to enjoy a day at the beach this would be the best place.</p></div>  
+  <div class="item3"><article>Jungle Beach</article></div>
+  
+</div>
+<footer>
+    Made with <i class="fas fa-heart text-danger"></i> from <a href="CVs/kevin.html">Kevin Kularathne</a> - 2018552
+</footer>
 </body>
 </html>

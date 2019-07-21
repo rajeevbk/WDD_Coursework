@@ -34,10 +34,15 @@
             <li class="dropdown active">
                 <a href="javascript:void(0)">Places to Visit</a>
                 <div class="dropdown-content">
+<<<<<<< HEAD
+                    <a href="../Places/ellaRock.html">Ella Rock</a>
+                      <a href="../Places/sigiriya.html">Sigiriya</a>
+=======
                     <a href="ellaRock.html">Ella Rock</a>
                     <a href="unawatuna.html">Unawatuna</a>
                     <a href="sigiriya.html">Sigiriya</a>
                     <a href="sigiriya.html">Sigiriya</a>
+>>>>>>> 7293e99aafeae4459f97e3407b0caa57daac7461
                 </div>
             </li>
             <li><a href="../sitemap.html">Site Map</a></li>
@@ -70,8 +75,15 @@
             <li class="dropdown">
                 <a class="active" href="javascript:void(0)">Places to Visit</a>
                 <div class="dropdown-content">
+<<<<<<< HEAD
                     <a href="../Places/ellaRock.html">Ella Rock</a>
                     <a href="../Places/sigiriya.html">Sigiriya</a>
+=======
+                    <a href="ellaRock.html">Ella Rock</a>
+                    <a href="unawatuna.html">Unawatuna</a>
+                    <a href="sigiriya.html">Sigiriya</a>
+                    <a href="sigiriya.html">Sigiriya</a>
+>>>>>>> 7293e99aafeae4459f97e3407b0caa57daac7461
                 </div>
             </li>
             <li><a href="../sitemap.html">SiteMap</a></li>
