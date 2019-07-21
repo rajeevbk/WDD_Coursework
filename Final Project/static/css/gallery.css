@@ -2,10 +2,7 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    font-family: Arial;
-}
+
             
 .img_bar{
     padding: 50px;
@@ -17,6 +14,7 @@ body {
     float: left;
     width: 16.6%;
     padding: 4px;
+    ;
 }
 
 /* Style the images */
@@ -86,3 +84,4 @@ body {
   width: 50%;
   height: 500px;
 }
+

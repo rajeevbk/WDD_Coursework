@@ -1,0 +1,104 @@
+section {
+    display: flex;
+    flex-direction: row;
+    height: calc(100% - 93px);
+    margin-bottom: auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+body {
+    background: url("../img/ella/wpid-img_20141008_152722.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+}
+
+.left-info .elevation {
+    text-transform: uppercase;
+    font-size: 4em;
+    font-weight: bold;
+    letter-spacing: 10px;
+    writing-mode: vertical-rl;
+    text-align: center;
+}
+
+.left-info {
+    display: flex;
+    height: 100%;
+    background-color: #000000ad;
+    align-items: center;
+    border-right: 5px solid white;
+}
+
+.left-info .elevation-level{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.left-info .elevation-level #height{
+    font-size: 2.5em;
+}
+
+.elevation-level span {
+    display: block;
+    width: 200px;
+    text-align: center;
+}
+
+.description {
+    display: flex;
+    height: 100%;
+    margin-left: 20%;
+    background-color: #000000ad;
+    border-left: 5px solid white;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.description div p {
+    margin: 20px;
+    text-align: justify;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.description img {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.description h1 {
+    margin-left: -15%;
+    font-size: 6em;
+    text-transform: uppercase;
+}
+
+
+@media (max-width: 967px) {
+    .left-info {
+        display: none;
+    }
+
+    .description {
+        margin: inherit;
+        border-left: inherit;
+    }
+
+    .description img{
+        margin-top: 20px;
+    }
+
+    .description h1 {
+        text-align: center;
+    }
+    body {
+        height: inherit;
+        min-height: 100vh;
+    }
+    section{
+        height: inherit;
+        min-height: calc(100% - 93px);
+    }
+}

@@ -34,14 +34,14 @@
             <li><a class="active" href="index.html">Home</a></li>
             <li><a href="aboutUs.html">About Us</a></li>
             <li><a href="quiz.html">Quiz</a></li>
-            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#gallery">Galley</a></li>
             <li><a href="shop.html">Store</a></li>
             <li class="dropdown">
                 <a href="javascript:void(0)" class="dropbtn">Meet the Team</a>
                 <div class="dropdown-content">
-                      <a href="CVs/isala.html">Isala Piyarisi</a>
+                     <a href="CVs/isala.html">Isala Piyarisi</a>
                     <a href="CVs/kevin.html">Kevin Kularathne</a>
-                    <a href="CVs/rajeev.html">Rajeev Kodippily</a>
+                    <a href="CVs/rajeev.html">rajeev</a>
                     <a href="CVs/rahma.html">rahma</a>
                 </div>
             </li>
@@ -49,7 +49,11 @@
                 <a href="javascript:void(0)">Places to Visit</a>
                 <div class="dropdown-content">
                     <a href="Places/ellaRock.html">Ella Rock</a>
+<<<<<<< HEAD
+=======
                     <a href="Places/unawatuna.html">Unawatuna</a>
+                    <a href="Places/sigiriya.html">Sigiriya</a>
+>>>>>>> 7293e99aafeae4459f97e3407b0caa57daac7461
                     <a href="Places/sigiriya.html">Sigiriya</a>
                 </div>
             </li>
@@ -74,19 +78,20 @@
             <li class="dropdown">
                 <a href="javascript:void(0)" class="dropbtn">Meet the Team</a>
                 <div class="dropdown-content">
-                     <a href="CVs/isala.html">Isala Piyarisi</a>
+                    <a href="CVs/isala.html">Isala Piyarisi</a>
+<<<<<<< HEAD
+                    <a href="Places/sigiriya.html">Sigiriya</a>
+=======
                     <a href="CVs/kevin.html">Kevin Kularathne</a>
-                    <a href="CVs/rajeev.html">Rajeev Kodippily</a>
+                    <a href="CVs/rajeev.html">rajeev</a>
                     <a href="CVs/rahma.html">rahma</a>
-
+>>>>>>> 7293e99aafeae4459f97e3407b0caa57daac7461
                 </div>
             </li>
             <li class="dropdown">
                 <a href="javascript:void(0)">Places to Visit</a>
                 <div class="dropdown-content">
                     <a href="Places/ellaRock.html">Ella Rock</a>
-                    <a href="Places/unawatuna.html">Unawatuna</a>
-                    <a href="Places/sigiriya.html">Sigiriya</a>
                 </div>
             </li>
             <li><a href="sitemap.html">SiteMap</a></li>
