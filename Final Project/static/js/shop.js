@@ -5,12 +5,7 @@ const shoppingCart = [];
 function addToCart(id) {
     const btn = document.getElementById(id);
 
-    btn.classList.replace('btn-add-cart', 'btn-remove-cart');
     btn.getElementsByTagName('span')[0].innerText = 'Remove from Cart';
-
-    btn.onclick = function () {
-        removeFromCart(id)
-    };
 
     const quantity = document.getElementById(`${id}-quantity`).value;
     const cart = document.querySelector("#cart");
@@ -32,7 +27,17 @@ function addToCart(id) {
     itemsInCart += 1;
     updateTotal();
 
-    shoppingCart.push({"name": btn.getAttribute('data-item-name'), "quantity": quantity, "price": btn.getAttribute('data-price') * quantity})
+    shoppingCart.push({
+        "name": btn.getAttribute('data-item-name'),
+        "quantity": quantity,
+        "price": btn.getAttribute('data-price') * quantity
+    });
+
+    btn.classList.replace('btn-add-cart', 'btn-remove-cart');
+    btn.onclick = function () {
+        removeFromCart(id)
+    };
+
 }
 
 function removeFromCart(id) {
@@ -48,19 +53,22 @@ function removeFromCart(id) {
     orderSubTotal -= parseFloat(btn.getAttribute('data-price')) * quantity;
     itemsInCart -= 1;
     updateTotal();
-    shoppingCart.splice({"name": btn.getAttribute('data-item-name'), "quantity": quantity, "price": btn.getAttribute('data-price') * quantity}, 1)
+    shoppingCart.splice({
+        "name": btn.getAttribute('data-item-name'),
+        "quantity": quantity,
+        "price": btn.getAttribute('data-price') * quantity
+    }, 1)
 }
 
 function updateTotal() {
     document.querySelector("#order-subtotal").innerHTML = `${round2Two(orderSubTotal)} LKR`;
-    document.querySelector("#order-tax").innerHTML = `${round2Two(orderSubTotal/5)} LKR`;
-    document.querySelector("#order-total").innerHTML = `${round2Two(orderSubTotal + orderSubTotal/5)} LKR`;
-    if (itemsInCart===0){
+    document.querySelector("#order-tax").innerHTML = `${round2Two(orderSubTotal / 5)} LKR`;
+    document.querySelector("#order-total").innerHTML = `${round2Two(orderSubTotal + orderSubTotal / 5)} LKR`;
+    if (itemsInCart === 0) {
         const cart = document.querySelector("#items-in-cart");
         cart.classList.remove('d-inline-block');
         cart.classList.add('d-none')
-    }
-    else{
+    } else {
         const cart = document.querySelector("#items-in-cart");
         cart.classList.remove('d-none');
         cart.classList.add('d-inline-block');
@@ -75,25 +83,25 @@ function round2Two(value) {
 
 function checkout() {
     const name = document.getElementById("first-name").value;
-    if(validDateFormData()){
+    if (validDateFormData()) {
         let summery = `Dear ${name},\nYou have ordered `;
         shoppingCart.forEach(function (item) {
             summery += `${item['quantity']} ${item['name']} at cost of ${item['price']} LKR,`
         });
         summery = summery.slice(0, -1);
-        alert(`${summery}\n\nYour Total Bill is ${round2Two(orderSubTotal + orderSubTotal/5)} LKR \nYour Order ID is #${Math.floor((Math.random() * 5000)+1000)}`);
+        alert(`${summery}\n\nYour Total Bill is ${round2Two(orderSubTotal + orderSubTotal / 5)} LKR \nYour Order ID is #${Math.floor((Math.random() * 5000) + 1000)}`);
         window.location.reload();
     }
 }
 
 function validDateFormData() {
     const formInputs = document.forms["billing-details"].getElementsByTagName("input");
-    if(document.forms["billing-details"].getElementsByTagName("select")[0].value === ''){
+    if (document.forms["billing-details"].getElementsByTagName("select")[0].value === '') {
         alert("You need to select a country before placing the order");
         return false
     }
     for (let i = 0; i < formInputs.length; i++) {
-        if(formInputs[i].value === '' || formInputs[i].value === null){
+        if (formInputs[i].value === '' || formInputs[i].value === null) {
             alert(formInputs[i].id.replace('-', ' ') + ' is required to place the order');
             return false
         }
@@ -105,6 +113,7 @@ function showCheckOut() {
     document.querySelector("#checkout-wrapper").classList.add("d-block");
     document.querySelector("#shop-wrapper").classList.add("d-none");
 }
+
 function hideCheckOut() {
     document.querySelector("#checkout-wrapper").classList.remove("d-block");
     document.querySelector("#shop-wrapper").classList.remove("d-none");
