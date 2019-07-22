@@ -41,7 +41,7 @@
   background-color: "";
   color: "";
   
-  width: 98%;
+  width: 98.5%;
 }
 
 #select1:checked~div.wrapper {
@@ -52,7 +52,7 @@
 #imgdescription{
     position: absolute;
     top:4.6%;
-    left: 51%;
+    left: 50.8%;
     color: "";
     font-size: 1.2em;
     width: 50%;
@@ -81,7 +81,7 @@
 }
 
 #expandedImg{
-  width: 50%;
+  width: 50.3%;
   height: 500px;
 }
 

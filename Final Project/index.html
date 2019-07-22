@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="static/fontawesome/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="static/css/gallery.css">
     <link rel="stylesheet" type="text/css" href="static/css/splash_screen.css">
+    <link rel="stylesheet" type="text/css" href="static/css/slider.css">
 </head>
 <body>
 <div id="splash-screen">
@@ -97,7 +98,67 @@
 </header>
 
 <section>
-    <h2>Slider</h2>
+    
+        <div class="slideshow-container">
+       
+
+            <div class="mySlider fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="static/img/slider/lighthouse.png" style="width:100%">
+              <div class="text">Welcome <br> &nbsp; to Sri Lanka</div>
+            </div>
+
+            <div class="mySlider fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="static/img/slider/sigiriya2.jpg"style="width:100%">
+              <div class="text">Welcome <br> &nbsp; to Sri Lanka</div>
+            </div>
+
+            <div class="mySlider fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="static/img/slider/Nuwara%20Eliya.png"style="width:100%">
+              <div class="text">Welcome <br> &nbsp; to Sri Lanka</div>
+            </div>
+            <a class="prev" onclick="Slide(-1)">&#10094;</a>
+            <a class="next" onclick="Slide(1)">&#10095;</a>
+
+        </div>
+      
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+
+        <script>
+        var slideIndex = 1;
+        showSlide(slideIndex);
+
+        function Slide(n) {
+          showSlide(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlide(slideIndex = n);
+        }
+
+        function showSlide(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlider");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
 </section>
 
 <section class="gallery">
