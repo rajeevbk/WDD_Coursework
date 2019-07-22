@@ -10,15 +10,15 @@
     <link rel="stylesheet" type="text/css" href="../static/css/main.css">
 <style>
 
-.item1 { grid-area: left;
+.item1 { grid-area: img1;
    background-image: url(../static/img/unawatuna/surfing.jpg)} 
 .item2 { grid-area: main; 
    height: 550px;
     background-color: #333333;
-    opacity: 0.9;
+    
     color: white;
     }
-.item3 { grid-area: right;
+.item3 { grid-area: img2;
     background-image: url(../static/img/unawatuna/Unawatuna5-Palm.jpg)}
 
 
@@ -26,11 +26,11 @@
   display: grid;
   grid-template-areas:
     
-    'left left main main right right'
-    'left left main main right right';
+    'img1 img1 main main img2 img2'
+    'img1 img1 main main img2 img2';
   grid-gap: 10px;
   
-  padding: 0px;
+  
 }
 
 .grid-container > div {
@@ -41,8 +41,8 @@
     
     p{  position: sticky;
         
-        padding: 10px;
-        font-size: 22px;
+        padding: 1px;
+        font-size: 0.7em;
         text-align: center;
         width: 300px;
        left:36%;
