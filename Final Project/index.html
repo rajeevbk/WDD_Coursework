@@ -8,16 +8,17 @@
     <title>Visit Sri Lanka</title>
     <link rel="stylesheet" type="text/css" href="static/css/main.css">
     <link rel="stylesheet" type="text/css" href="static/css/navbar.css">
-    <link rel="stylesheet" type="text/css" href="static/fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="static/webfonts/fontawesome/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="static/css/gallery.css">
-    <link rel="stylesheet" type="text/css" href="static/css/splash_screen.css">
+    <link rel="stylesheet" type="text/css" href="static/css/splashScreen.css">
     <link rel="stylesheet" type="text/css" href="static/css/slider.css">
+    <link rel="icon" href="static/img/Logo/Grouplogo.png" type="image/png">
 </head>
 <body>
 <div id="splash-screen">
     <div class="splash-screen-grid">
         <div class="splash-screen-logo">
-            <img src="static/img/loading_screen.png" alt="Sri Lankan Culture">
+            <img src="static/img/Logo/Grouplogo.svg" alt="Sri Lankan Culture">
         </div>
         <div>
             <h2 style="font-size: 4em" class="text-lightgreen">Travel to</h2>
@@ -30,20 +31,21 @@
 <header>
     <nav id="desktop-nav">
         <ul>
-            <li><a id="logo" class="active" href="javascript:void(0)"><i class="fas fa-globe-asia"></i> <i
-                    class="fas fa-plane-departure fa-lg"></i></a></li>
+            <li><a id="logo-wrapper" class="active" href="javascript:void(0)">
+                <img class="logo" src="static/img/Logo/Grouplogo.svg" alt="Logo">
+            </a></li>
             <li><a class="active" href="index.html">Home</a></li>
             <li><a href="aboutUs.html">About Us</a></li>
             <li><a href="quiz.html">Quiz</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="shop.html">Store</a></li>
             <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Meet the Team</a>
+                <a href="javascript:void(0)">Meet the Team</a>
                 <div class="dropdown-content">
-                      <a href="CVs/isala.html">Isala Piyarisi</a>
+                    <a href="CVs/isala.html">Isala Piyarisi</a>
                     <a href="CVs/kevin.html">Kevin Kularathne</a>
                     <a href="CVs/rajeev.html">Rajeev Kodippily</a>
-                    <a href="CVs/RahmaCV.html">Rahma Hamza</a>
+                    <a href="CVs/rahma.html">Rahma Hamza</a>
                 </div>
             </li>
             <li class="dropdown">
@@ -51,6 +53,7 @@
                 <div class="dropdown-content">
                     <a href="Places/ellaRock.html">Ella Rock</a>
                     <a href="Places/unawatuna.html">Unawatuna</a>
+                    <a href="Places/singharaja.html">Singharaja</a>
                     <a href="Places/sigiriya.html">Sigiriya</a>
                 </div>
             </li>
@@ -61,8 +64,9 @@
     </nav>
     <nav id="mobile-nav">
         <ul id="mobile-nav-menu">
-            <li><a id="logo" class="active" href="javascript:void(0)"><i class="fas fa-globe-asia"></i> <i
-                    class="fas fa-plane-departure fa-lg"></i></a></li>
+            <li><a id="logo-wrapper" class="active" href="javascript:void(0)">
+                <img class="logo" src="static/img/Logo/Grouplogo.svg" alt="Logo">
+            </a></li>
             <li onclick="toggleMobileNavBar();"><i class="fas fa-bars text-white nav-right fa-2x"
                                                    style="margin: 5px"></i></li>
         </ul>
@@ -73,13 +77,12 @@
             <li><a href="#gallery">Galley</a></li>
             <li><a href="shop.html">Store</a></li>
             <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Meet the Team</a>
+                <a href="javascript:void(0)">Meet the Team</a>
                 <div class="dropdown-content">
-                     <a href="CVs/isala.html">Isala Piyarisi</a>
+                    <a href="CVs/isala.html">Isala Piyarisi</a>
                     <a href="CVs/kevin.html">Kevin Kularathne</a>
                     <a href="CVs/rajeev.html">Rajeev Kodippily</a>
-                    <a href="CVs/RahmaCV.html">rahma</a>
-
+                    <a href="CVs/rahma.html">Rahma Hamza</a>
                 </div>
             </li>
             <li class="dropdown">
@@ -87,6 +90,7 @@
                 <div class="dropdown-content">
                     <a href="Places/ellaRock.html">Ella Rock</a>
                     <a href="Places/unawatuna.html">Unawatuna</a>
+                    <a href="Places/singharaja.html">Singharaja</a>
                     <a href="Places/sigiriya.html">Sigiriya</a>
                 </div>
             </li>
@@ -98,133 +102,149 @@
 </header>
 
 <section>
-    
-        <div class="slideshow-container">
-       
 
-            <div class="mySlider fade">
-              <div class="sliderNo">1 / 3</div>
-              <img src="static/img/slider/lighthouse.png" style="width:100%">
-              <div class="text">Welcome <br> &nbsp; to Sri Lanka</div>
-            </div>
+    <div class="slideshow-container">
 
-            <div class="mySlider fade">
-              <div class="sliderNo">2 / 3</div>
-              <img src="static/img/slider/sigiriya2.jpg"style="width:100%">
-              <div class="text">Welcome <br> &nbsp; to Sri Lanka</div>
-            </div>
 
-            <div class="mySlider fade">
-              <div class="sliderNo">3 / 3</div>
-              <img src="static/img/slider/Nuwara%20Eliya.png"style="width:100%">
-              <div class="text">Welcome <br> &nbsp; to Sri Lanka</div>
-            </div>
-            <a class="prev" onclick="Slide(-1)">&#10094;</a>
-            <a class="next" onclick="Slide(1)">&#10095;</a>
-
-        </div>
-      
-
-        <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span> 
-          <span class="dot" onclick="currentSlide(2)"></span> 
-          <span class="dot" onclick="currentSlide(3)"></span> 
+        <div class="mySlider fade">
+            <div class="sliderNo">1 / 3</div>
+            <img src="static/img/slider/lighthouse.png" style="width:100%">
+            <div class="text">Welcome <br> &nbsp; to Sri Lanka</div>
         </div>
 
-        <script>
+        <div class="mySlider fade">
+            <div class="sliderNo">2 / 3</div>
+            <img src="static/img/slider/sigiriya2.jpg" style="width:100%">
+            <div class="text">Welcome <br> &nbsp; to Sri Lanka</div>
+        </div>
+
+        <div class="mySlider fade">
+            <div class="sliderNo">3 / 3</div>
+            <img src="static/img/slider/Nuwara%20Eliya.png" style="width:100%">
+            <div class="text">Welcome <br> &nbsp; to Sri Lanka</div>
+        </div>
+        <a class="prev" onclick="Slide(-1)">&#10094;</a>
+        <a class="next" onclick="Slide(1)">&#10095;</a>
+
+    </div>
+
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
         var slideIndex = 1;
         showSlide(slideIndex);
 
         function Slide(n) {
-          showSlide(slideIndex += n);
+            showSlide(slideIndex += n);
         }
 
         function currentSlide(n) {
-          showSlide(slideIndex = n);
+            showSlide(slideIndex = n);
         }
 
         function showSlide(n) {
-          var i;
-          var slides = document.getElementsByClassName("mySlider");
-          var dots = document.getElementsByClassName("dot");
-          if (n > slides.length) {slideIndex = 1}    
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";  
-          }
-          for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
+            var i;
+            var slides = document.getElementsByClassName("mySlider");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
         }
-        </script>
+    </script>
 </section>
 
-<section class="gallery">
-          <!-- The six images floating next to each other -->
-            <div class="img_bar">
-                <h1>Top 6 Cities to Visit</h1>
-                <br>
-                <div class="row">
-                      <div class="column"><!-- Image 1 -->
-                            <img src="static/img/gallery/colombo.jpg" alt="Colombo" title="Colombo is the commercial capital of Sri Lanka. It's a busy and a Vibrant place with a mixture of modern life and colonial buildings situated around the city. It is the best place to experience a luxury life along with food from all around the world and tons of entertainment." style="width:100%"; height="120" onmouseover="myFunction(this);" >
-                      </div>
-                      <div class="column"><!-- Image 2-->
-                            <img src="static/img/gallery/Kandy2.jpg" alt="Kandy" title="Last Successful Kingdom of Sri Lanka protected by the surrounding mountians is the best place to visit to experience the heritage and different cultures of Sri Lanka. The city is filled with its own secrets about the history of the last Kindom for you to explore. "style="width:100%" ; height="120" onmouseover="myFunction(this);">
-                      </div>
-                      <div class="column"><!-- Image 3 -->
-                            <img src="static/img/gallery/Anuradhapura4.jpg" alt="Anuradhapura"title="The first Kindom of Sri lanka has still been able to amaze us with its creations. The city is filled with mind-blowing constructions made with a technology still puzzles the world. Also filled with the history of Buddhism and its influence to art, is a must place to visit to see the true beauty of creations by man." style="width:100%"; height="120" onmouseover="myFunction(this);">
-                      </div>
-                      <div class="column"><!-- Image 4 -->
-                            <img src="static/img/gallery/galle2.jpg"alt="Galle" title="Located in the Southern Province this place carries its own history and beauty. It has been a special place through out history with its location in the Indian ocean. Filled with wonderfull beaches and ruins of history the place is the best experience many cultures and the ocean life." style="width:100%"; height="120" onmouseover="myFunction(this);">
-                      </div>
-                      <div class="column"><!-- Image 5 -->
-                            <img src="static/img/gallery/Nuwaraeliya.jpg" alt="Nuwara-Eliya" title="Located in the Central Province and been home to many wonderful Waterfalls this place is a paradise its self. Arriving here from a wonderful train journey to vitness the cold  weather on mountains covered by green and the finest tea in the world and to stay in a luxurious hotel with one of the finest views will be life lasting wonderful memory for you." style="width:100%"; height="120" onmouseover="myFunction(this);">
-                      </div>
-                            <div class="column"><!-- Image 6 -->
-                            <img src="static/img/gallery/Polonnaruwa.jpg" alt="Polonnaruwa" title="Polonnaruwa was the strongest Kingdom in Sri Lanka. The city is now filled with ancient ruins and constructions. Giving shelter to many migrating birds all around the world this ancient city is filled with bio-diversity. The poeple there will show you an amazing hospitality and culture". style="width:100%"; height="120" onmouseover="myFunction(this);">
-                      </div>
-                </div>
-                <div class="container">
-                     <div id="adjust">
-                        <table>
-                            <tr>
-                                <td><!-- Background color selection -->
-                                    <form>Background color:
-                                        <select id="BGColor" onchange="selectBackground()">
-                                          <option>Default</option>
-                                          <option value="#000033">Dark Blue</option>
-                                          <option value="#0099ff">Blue</option>
-                                          <option value="#4CAF50">Green</option>
-                                          <option value="#8484e1">Violet</option>
-                                        </select>
-                                    </form>
-                                </td>
-
-                                <td><!-- Text color selection -->
-                                    <form>&nbsp;Text color:
-                                      <select id="TxtColor" onchange="selectText()">
-                                          <option>Default</option>
-                                          <option value="#4d4dff">Blue</option>
-                                          <option value="#ff4d4d">Rose</option>
-                                          <option value="green">Green</option>
-                                          <option value="#FFFFFF">White</option>
-                                      </select>
-                                    </form>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <!-- close icon -->
-                    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times; </span>
-                    <img id="expandedImg">
-                    <div id = "imgtext"></div>
-                    <div id = "imgdescription"></div>
-                </div>
-                <script type="text/javascript" src="static/js/gallery.js"></script>
+<section id="gallery" class="gallery">
+    <!-- The six images floating next to each other -->
+    <div class="img_bar">
+        <h1>Top 6 Cities to Visit</h1>
+        <br>
+        <div class="row">
+            <div class="column"><!-- Image 1 -->
+                <img src="static/img/gallery/colombo.jpg" alt="Colombo"
+                     title="Colombo is the commercial capital of Sri Lanka. It's a busy and a Vibrant place with a mixture of modern life and colonial buildings situated around the city. It is the best place to experience a luxury life along with food from all around the world and tons of entertainment."
+                     style="width:100%" ; height="120" onmouseover="myFunction(this);">
             </div>
-        </section>
+            <div class="column"><!-- Image 2-->
+                <img src="static/img/gallery/Kandy2.jpg" alt="Kandy"
+                     title="Last Successful Kingdom of Sri Lanka protected by the surrounding mountians is the best place to visit to experience the heritage and different cultures of Sri Lanka. The city is filled with its own secrets about the history of the last Kindom for you to explore. "
+                     style="width:100%" ; height="120" onmouseover="myFunction(this);">
+            </div>
+            <div class="column"><!-- Image 3 -->
+                <img src="static/img/gallery/Anuradhapura4.jpg" alt="Anuradhapura"
+                     title="The first Kindom of Sri lanka has still been able to amaze us with its creations. The city is filled with mind-blowing constructions made with a technology still puzzles the world. Also filled with the history of Buddhism and its influence to art, is a must place to visit to see the true beauty of creations by man."
+                     style="width:100%" ; height="120" onmouseover="myFunction(this);">
+            </div>
+            <div class="column"><!-- Image 4 -->
+                <img src="static/img/gallery/galle2.jpg" alt="Galle"
+                     title="Located in the Southern Province this place carries its own history and beauty. It has been a special place through out history with its location in the Indian ocean. Filled with wonderfull beaches and ruins of history the place is the best experience many cultures and the ocean life."
+                     style="width:100%" ; height="120" onmouseover="myFunction(this);">
+            </div>
+            <div class="column"><!-- Image 5 -->
+                <img src="static/img/gallery/Nuwaraeliya.jpg" alt="Nuwara-Eliya"
+                     title="Located in the Central Province and been home to many wonderful Waterfalls this place is a paradise its self. Arriving here from a wonderful train journey to vitness the cold  weather on mountains covered by green and the finest tea in the world and to stay in a luxurious hotel with one of the finest views will be life lasting wonderful memory for you."
+                     style="width:100%" ; height="120" onmouseover="myFunction(this);">
+            </div>
+            <div class="column"><!-- Image 6 -->
+                <img src="static/img/gallery/Polonnaruwa.jpg" alt="Polonnaruwa"
+                     title="Polonnaruwa was the strongest Kingdom in Sri Lanka. The city is now filled with ancient ruins and constructions. Giving shelter to many migrating birds all around the world this ancient city is filled with bio-diversity. The poeple there will show you an amazing hospitality and culture"
+                     . style="width:100%" ; height="120" onmouseover="myFunction(this);">
+            </div>
+        </div>
+        <div class="container">
+            <div id="adjust">
+                <table>
+                    <tr>
+                        <td><!-- Background color selection -->
+                            <form>Background color:
+                                <select id="BGColor" onchange="selectBackground()">
+                                    <option>Default</option>
+                                    <option value="#000033">Dark Blue</option>
+                                    <option value="#0099ff">Blue</option>
+                                    <option value="#4CAF50">Green</option>
+                                    <option value="#8484e1">Violet</option>
+                                </select>
+                            </form>
+                        </td>
+
+                        <td><!-- Text color selection -->
+                            <form>&nbsp;Text color:
+                                <select id="TxtColor" onchange="selectText()">
+                                    <option>Default</option>
+                                    <option value="#4d4dff">Blue</option>
+                                    <option value="#ff4d4d">Rose</option>
+                                    <option value="green">Green</option>
+                                    <option value="#FFFFFF">White</option>
+                                </select>
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- close icon -->
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times; </span>
+            <img id="expandedImg">
+            <div id="imgtext"></div>
+            <div id="imgdescription"></div>
+        </div>
+        <script type="text/javascript" src="static/js/gallery.js"></script>
+    </div>
+</section>
 
 <section>
 
@@ -241,7 +261,7 @@
 
 </footer>
 
-<script src="static/js/main.js"></script>
+<!--script src="static/js/main.js"></script-->
 <script src="static/js/navbar.js"></script>
 </body>
 </html>

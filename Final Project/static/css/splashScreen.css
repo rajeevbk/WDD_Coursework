@@ -6,6 +6,10 @@
     height: 100vh;
 }
 
+.splash-screen-logo img{
+    max-width: 400px;
+    width: 100%;
+}
 
 .hide {
   -webkit-transition: 1s;

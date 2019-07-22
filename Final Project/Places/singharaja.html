@@ -1,0 +1,246 @@
+<html lang="en">
+<head>
+    <style>
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/jpeg;base64,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");
+        }
+
+        .container {
+            float: center;
+            padding: 75px 0;
+            margin-left: 65px;
+            margin-right: 15px;
+            width: 1140px;
+            height: 100%;
+        }
+
+        .container h1 {
+            color: white;
+            margin-top: 2px;
+            font-family: Courier;
+        }
+
+        h1 {
+            position: relative;
+            margin-bottom: 45px;
+            font-family: sans-serif;
+            font-size: 2em;
+            text-transform: uppercase;
+            color: #424242;
+        }
+
+        .gallery-wrap {
+            align: center;
+            display: flex;
+            flex-direction: row;
+            width: 120%;
+            height: 130%;
+        }
+
+        .item {
+            border: 1px solid white;
+            flex: 1;
+            height: 100%;
+            background-repeat: none;
+            background-size: cover;
+            background-position: center;
+            transition: flex 0.8s ease;
+            font-size: 1.1em;
+            padding: 10px;
+        }
+
+        :hover {
+            flex: 7;
+        }
+
+        .item-2 {
+            font-weight: bold;
+            background-color: #43CA67;
+            font-family: Helvetica;
+        }
+
+        .item-3 {
+            font-weight: bold;
+            background-color: #5CEF30;
+            font-family: Courier;
+            height: 100%;
+        }
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="../static/css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="../static/webfonts/fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <title>Sinharaja Forest</title>
+    <link rel="icon" href="../static/img/Logo/Grouplogo.png" type="image/png">
+</head>
+
+<body>
+<header>
+    <nav id="desktop-nav">
+        <ul>
+            <li><a id="logo-wrapper" class="active" href="javascript:void(0)">
+                <img class="logo" src="../static/img/Logo/Grouplogo.svg" alt="Logo">
+            </a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../aboutUs.html">About Us</a></li>
+            <li><a href="../quiz.html">Quiz</a></li>
+            <li><a href="../index.html#gallery">Galley</a></li>
+            <li><a href="../shop.html">Store</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">Meet the Team</a>
+                <div class="dropdown-content">
+                    <a href="../CVs/isala.html">Isala Piyarisi</a>
+                    <a href="../CVs/kevin.html">Kevin Kularathne</a>
+                    <a href="../CVs/rajeev.html">Rajeev Kodippily</a>
+                    <a href="../CVs/rahma.html">Rahma Hamza</a>
+                </div>
+            </li>
+            <li class="dropdown active">
+                <a href="javascript:void(0)">Places to Visit</a>
+                <div class="dropdown-content">
+                    <a href="ellaRock.html">Ella Rock</a>
+                    <a href="unawatuna.html">Unawatuna</a>
+                    <a href="singharaja.html">Singharaja</a>
+                    <a href="sigiriya.html">Sigiriya</a>
+                </div>
+            </li>
+            <li><a href="../sitemap.html">Site Map</a></li>
+            <li class="nav-right"><a onclick="changeGlobalFontSize(-0.1)">- Font Size</a></li>
+            <li class="nav-right"><a onclick="changeGlobalFontSize(0.1)">+ Font Size</a></li>
+        </ul>
+    </nav>
+    <nav id="mobile-nav">
+        <ul id="mobile-nav-menu">
+            <li><a id="logo-wrapper" class="active" href="javascript:void(0)">
+                <img class="logo" src="../static/img/Logo/Grouplogo.svg" alt="Logo">
+            </a></li>
+            <li onclick="toggleMobileNavBar();"><i class="fas fa-bars text-white nav-right fa-2x"
+                                                   style="margin: 5px"></i></li>
+        </ul>
+        <ul id="mobile-nav-items" class="d-none">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../aboutUs.html">About Us</a></li>
+            <li><a href="../quiz.html">Quiz</a></li>
+            <li><a href="../index.html#gallery">Galley</a></li>
+            <li><a href="../shop.html">Store</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">Meet the Team</a>
+                <div class="dropdown-content">
+                    <a href="../CVs/isala.html">Isala Piyarisi</a>
+                    <a href="../CVs/kevin.html">Kevin Kularathne</a>
+                    <a href="../CVs/rajeev.html">Rajeev Kodippily</a>
+                    <a href="../CVs/rahma.html">Rahma Hamza</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="active" href="javascript:void(0)">Places to Visit</a>
+                <div class="dropdown-content">
+                    <a href="ellaRock.html">Ella Rock</a>
+                    <a href="unawatuna.html">Unawatuna</a>
+                    <a href="singharaja.html">Singharaja</a>
+                    <a href="sigiriya.html">Sigiriya</a>
+                </div>
+            </li>
+            <li><a href="../sitemap.html">SiteMap</a></li>
+            <li><a onclick="changeGlobalFontSize(0.1)">+ Font Size</a></li>
+            <li><a onclick="changeGlobalFontSize(-0.1)">- Font Size</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="container">
+    <h1 align="center">Singharaja Forest Reserve</h1>
+    <div class="gallery-wrap">
+
+        <div class="item item-3">
+            <h1 align="center">Introduction and About</h1>
+            <p>
+                Sinharaja meaning 'Lion Kingdom' is a rainforest designated in 1989
+                as a UNESCO Natural World Heritage Site and it is one of the most
+                important biodiversity hotspots in Sri lanka bursting with various
+                species of flora and fauna an inevitable treasure trove<br>
+                There are so many factors that highlight the importance of this
+                tropical forest reserve in terms of its exceptional biodiversity.<br>
+                This lowland evergreen rain forest is home to 95% of the endemic
+                birds of Sri Lanka! and believed to be home for almost 50% of Sri
+                Lankas endemic wildlife drawing thousands of visitors wanting to
+                explore & experience this natural wonder that is rich in endemism
+                steeped in deep legend and mystery.<br>
+                'Sinharaja' translates to Lion(Sinha) & King(Raja) alluding to a popular belief according to which the
+                origin of the Sinhala people is from the union between a princess and the lion king who once lived in
+                this forest.
+                Situated 172.1 km from Colombo via the Southern Expressway this forest is accessible from 3 entrances &
+                though smaller than other National Parks,Singharaja extends over an area of 11,187 hectares.
+            </p>
+        </div>
+
+
+        <div class="item item-3">
+            <h1 align="center">Vegetation and Rainfall</h1>
+            <p style="font-family:Courier; font-weight: bold;">
+                Tropical humid wet evergreen forest with a high degree of endemism, is said to be the vegetation at
+                Sinharaja and a striking characteristic of the forest is the loftiness of the dominant trees growing to
+                heights of 35m to 40m or more with unbelievable genetic potential.
+                The untapped genetic potential of Sinharaja flora is enormous.
+                Of the 211 woody trees and lianas, 66% or 139 of them are endemic to the forest reserve. The lower
+                plants
+                such as Ferns and epiphytes of the 25 endemic species 13 have been recorded within Sinharaja itself.
+                Some families such as Dipterocarpaceae show an endemism more than 90%. Similarly, high levels of
+                endemism
+                are visible for the lower plants like ferns, Epiphyts as well. Out of 25 general endemic to Sri Lanka
+                <i>13
+                    are represented in Sinharaja.</i><br>
+                Inclusive of trees, shrubs, herbs and seedlings the total vegetation
+                density, at this beautiful forest reserve has been estimated to be
+                around 240,000 individuals per hectare.<br>
+                2 well known & important rivers in Sri lanka namely the Gin and
+                Kalu Ganga(Rivers) and many other waterways are fed and nourished by
+                the waters that flow from this forest reserve.
+            </p>
+        </div>
+
+        <div class="item item-3">
+            <h1 align="center">Mammals</h1>
+            <p>
+                Singharaja is a favorable sanctuary for various species of
+                mammals, reptiles, insects, fish, amphibians,birds and plant life;
+                all co-existing within the ecosystem. Speaking about the smaller
+                mammals Porcupines, Otters, three types of squirrels, two species
+                of Mongoose- , two species of Civets; Ring-tailed and Golden Palm,
+                many species of Bandicoot, Rats, Bats and even the very rare
+                Pangolin are to name a prominent few and now moving on to the Larger
+                Mammals, Elephants, Sambar, Leopards, Fishing Cat, Rusty Spotted Cat,
+                Barking deer, Mouse deer, Jackal and Wild boar and a reddish brown
+                monkey are a few of the many amazing species you will come across at
+                Singharaja.
+            </p>
+        </div>
+
+        <div class="item item-3">
+            <h1 align="center">Birds at Singharaja</h1>
+            <p style="font-family:Courier; font-weight: bold;">
+                Sinharaja has recorded over 154 species of birds and is known to
+                have a <i>mixed-species feeding flocks</i> or informally called a
+                bird wave where two or more species feed and move together.
+                This unique sight witnessed at Sinharaja sometimes consists of
+                flocks containing 30-50 birds of various species sometimes 10-12
+                species, erupting in various bird sounds as they feed and move
+                within a short time. Taking lead in this exercise is the Orange-billed
+                babbler and the Crested drongo.<br>
+                The endemic birds witnessed here include Ceylon Lorikeet, Layards
+                parakeet, Jungle & Spur fowl, Sri Lanka Blue magpie, Sri Lanka
+                Grackle, Ceylon Hanging parrot, Ceylon Grey hornbill, Ashy-headed
+                laughing thrush,Spotted-wing thrush, Brown-capped
+                babbler, Ceylon Hill mynah, Red faced malkoha, Legges flower-pecker
+                amongst many others.
+            </p>
+        </div>
+
+    </div><!--closing tag for gallery-wrap-->
+</div><!--closing tag for container-->
+<script src="../static/js/navbar.js"></script>
+
+</body>
+</html>
