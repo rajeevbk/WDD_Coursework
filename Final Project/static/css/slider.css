@@ -60,6 +60,9 @@
 
 }
 
+.prev:hover, .next:hover {
+  background-color: #333333;
+}
 
 .active, .dot:hover {
   background-color: #717171;
