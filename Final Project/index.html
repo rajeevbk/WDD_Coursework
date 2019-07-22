@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="static/fontawesome/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="static/css/gallery.css">
     <link rel="stylesheet" type="text/css" href="static/css/splash_screen.css">
+    <link rel="stylesheet" type="text/css" href="static/css/slider.css">
 </head>
 <body>
 <div id="splash-screen">
@@ -42,7 +43,7 @@
                       <a href="CVs/isala.html">Isala Piyarisi</a>
                     <a href="CVs/kevin.html">Kevin Kularathne</a>
                     <a href="CVs/rajeev.html">Rajeev Kodippily</a>
-                    <a href="CVs/rahma.html">Rahma Hamza</a>
+                    <a href="CVs/RahmaCV.html">Rahma Hamza</a>
                 </div>
             </li>
             <li class="dropdown">
@@ -77,7 +78,7 @@
                      <a href="CVs/isala.html">Isala Piyarisi</a>
                     <a href="CVs/kevin.html">Kevin Kularathne</a>
                     <a href="CVs/rajeev.html">Rajeev Kodippily</a>
-                    <a href="CVs/rahma.html">rahma</a>
+                    <a href="CVs/RahmaCV.html">rahma</a>
 
                 </div>
             </li>
@@ -97,13 +98,74 @@
 </header>
 
 <section>
-    <h2>Slider</h2>
+    
+        <div class="slideshow-container">
+       
+
+            <div class="mySlider fade">
+              <div class="sliderNo">1 / 3</div>
+              <img src="static/img/slider/lighthouse.png" style="width:100%">
+              <div class="text">Welcome <br> &nbsp; to Sri Lanka</div>
+            </div>
+
+            <div class="mySlider fade">
+              <div class="sliderNo">2 / 3</div>
+              <img src="static/img/slider/sigiriya2.jpg"style="width:100%">
+              <div class="text">Welcome <br> &nbsp; to Sri Lanka</div>
+            </div>
+
+            <div class="mySlider fade">
+              <div class="sliderNo">3 / 3</div>
+              <img src="static/img/slider/Nuwara%20Eliya.png"style="width:100%">
+              <div class="text">Welcome <br> &nbsp; to Sri Lanka</div>
+            </div>
+            <a class="prev" onclick="Slide(-1)">&#10094;</a>
+            <a class="next" onclick="Slide(1)">&#10095;</a>
+
+        </div>
+      
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+
+        <script>
+        var slideIndex = 1;
+        showSlide(slideIndex);
+
+        function Slide(n) {
+          showSlide(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlide(slideIndex = n);
+        }
+
+        function showSlide(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlider");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
 </section>
 
 <section class="gallery">
           <!-- The six images floating next to each other -->
             <div class="img_bar">
-                <h2>Top 6 Cities to Visit</h2>
+                <h1>Top 6 Cities to Visit</h1>
+                <br>
                 <div class="row">
                       <div class="column"><!-- Image 1 -->
                             <img src="static/img/gallery/colombo.jpg" alt="Colombo" title="Colombo is the commercial capital of Sri Lanka. It's a busy and a Vibrant place with a mixture of modern life and colonial buildings situated around the city. It is the best place to experience a luxury life along with food from all around the world and tons of entertainment." style="width:100%"; height="120" onmouseover="myFunction(this);" >
