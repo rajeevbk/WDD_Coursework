@@ -65,7 +65,7 @@
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+  background-color: rgb(31,97,141);
 }
 
 @media only screen and (max-width: 300px) {
