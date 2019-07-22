@@ -7,30 +7,31 @@ function addToCart(id) {
 
     btn.getElementsByTagName('span')[0].innerText = 'Remove from Cart';
 
-    const quantity = document.getElementById(`${id}-quantity`).value;
+    const quantity = document.getElementById(`${id}-quantity`);
+    quantity.disabled = true;
     const cart = document.querySelector("#cart");
 
     const item = document.createElement("tr");
     const itemName = document.createElement("td");
 
     itemName.classList.add('order-item');
-    itemName.innerText = btn.getAttribute('data-item-name') + " x " + quantity;
+    itemName.innerText = btn.getAttribute('data-item-name') + " x " + quantity.value;
     item.append(itemName);
 
     const itemPrice = document.createElement("td");
-    itemPrice.innerText = (btn.getAttribute('data-price') * quantity) + ' LKR';
+    itemPrice.innerText = (btn.getAttribute('data-price') * quantity.value) + ' LKR';
     item.append(itemPrice);
     item.id = `order-${id}`;
     cart.prepend(item);
 
-    orderSubTotal += parseFloat(btn.getAttribute('data-price')) * quantity;
+    orderSubTotal += parseFloat(btn.getAttribute('data-price')) * quantity.value;
     itemsInCart += 1;
     updateTotal();
 
     shoppingCart.push({
         "name": btn.getAttribute('data-item-name'),
-        "quantity": quantity,
-        "price": btn.getAttribute('data-price') * quantity
+        "quantity": quantity.value,
+        "price": btn.getAttribute('data-price') * quantity.value
     });
 
     btn.classList.replace('btn-add-cart', 'btn-remove-cart');
@@ -42,7 +43,7 @@ function addToCart(id) {
 
 function removeFromCart(id) {
     const btn = document.getElementById(id);
-    const quantity = document.getElementById(`${id}-quantity`).value;
+    const quantity = document.getElementById(`${id}-quantity`);
     btn.classList.replace('btn-remove-cart', 'btn-add-cart');
     btn.getElementsByTagName('span')[0].innerText = 'Add to Cart';
     btn.onclick = function () {
@@ -50,14 +51,15 @@ function removeFromCart(id) {
     };
     const item = document.querySelector(`#order-${id}`);
     document.querySelector("#cart").removeChild(item);
-    orderSubTotal -= parseFloat(btn.getAttribute('data-price')) * quantity;
+    orderSubTotal -= parseFloat(btn.getAttribute('data-price')) * quantity.value;
     itemsInCart -= 1;
     updateTotal();
     shoppingCart.splice({
         "name": btn.getAttribute('data-item-name'),
-        "quantity": quantity,
-        "price": btn.getAttribute('data-price') * quantity
-    }, 1)
+        "quantity": quantity.value,
+        "price": btn.getAttribute('data-price') * quantity.value
+    }, 1);
+    quantity.disabled = false;
 }
 
 function updateTotal() {
