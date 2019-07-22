@@ -5,7 +5,7 @@
 
             
 .img_bar{
-    padding: 50px;
+    padding: 12px;
     align-content: center;
 }
 
@@ -13,7 +13,7 @@
 .column {
     float: left;
     width: 16.6%;
-    padding: 4px;
+    padding: 2px;
     ;
 }
 
@@ -68,7 +68,8 @@
   bottom: 2%;
   left: 1%;
   color: white ;
-  font-size: 1.5em;
+  font-size: 2em;
+   
 }
 
 .closebtn {
