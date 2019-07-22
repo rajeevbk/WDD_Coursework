@@ -60,7 +60,7 @@ h1{
 }
 
 
-.name-hero{
+.nameDeets{
 	background:rgba(0,0,0,.001);
 	bottom:0;
 	height:290px;
@@ -72,19 +72,19 @@ h1{
 	width:85%;
 }
 
-.name-hero h1{
+.nameDeets h1{
 	font-family:Open Sans, sans-serif;
 	font-size:1.5em;
 	text-align:center;
 }
 
-.name-hero h1 em{
+.nameDeets h1 em{
 	color:rgba(0,0,0,.3);
 	font-style:normal;
 	font-weight:700;
 }
 
-.name-hero p{
+.nameDeets p{
 	color:rgba(0,0,0,.5);
 	font-size:.75em;
 	line-height:1.0;
@@ -92,7 +92,7 @@ h1{
 	text-align:center;
 }
 
-.name-hero .myInfo{
+.nameDeets .myInfo{
 	margin:0 auto;
 	width:85%;
 }
