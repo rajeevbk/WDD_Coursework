@@ -75,15 +75,18 @@
 }
 
 @media (max-width: 940px) {
-    .col-3{
+    #sidebar{
         display: none;
     }
-    .col-9{
+    #main-container{
         margin: 5px;
         width: 100%;
     }
     .contacts{
         margin: 50px 0 50px 0;
+    }
+    .contacts table{
+        width: 620px;
     }
     .hide{
         display: block;
