@@ -18,6 +18,7 @@
 <header>
     <nav id="desktop-nav">
         <ul>
+            <!-- Java script void(0) to is just null pointer -->
             <li><a id="logo-wrapper" class="active" href="javascript:void(0)">
                 <img class="logo" src="static/img/Logo/Grouplogo.svg" alt="Logo of Travel Sri Lanka">
             </a></li>
@@ -26,6 +27,7 @@
             <li><a href="quiz.html">Quiz</a></li>
             <li><a href="index.html#gallery">Galley</a></li>
             <li class="dropdown active">
+                <!-- here I updated void(0) to void(1) because WAVE is telling me multiple links are pointed at the same location -->
                 <a href="javascript:void(1)">Store</a>
                 <div class="dropdown-content">
                     <a href="#clothing">T-Shirts & Shirts</a>
@@ -123,6 +125,7 @@
                     <label class="item-quantity"> Quantity
                         <input id="clothing-1-quantity" type="number" min="1" max="10" value="1">
                     </label>
+                    <!-- this.id refers to ID of the current element -->
                     <button id="clothing-1"
                             data-item-name="Elephant T-Shirt"
                             data-price=1200.0
@@ -143,6 +146,7 @@
                     <label class="item-quantity"> Quantity
                         <input id="clothing-2-quantity" type="number" min="1" max="10" value="1">
                     </label>
+                    <!-- this.id refers to ID of the current element -->
                     <button id="clothing-2" data-item-name="Devil Masks T-Shirt" data-price=1499.99
                             class="btn-add-cart"
                             onclick="addToCart(this.id)"><span>Add to Cart </span> <i class="material-icons"
@@ -239,6 +243,7 @@
                     <label class="item-quantity"> Quantity
                         <input id="mugs-2-quantity" type="number" min="1" max="10" value="1">
                     </label>
+                    <!-- this.id refers to ID of the current element -->
                     <button id="mugs-2" data-item-name="I Love Sri Lanka Mug" data-price=470.0
                             class="btn-add-cart"
                             onclick="addToCart(this.id)"><span>Add to Cart </span> <i class="material-icons"
@@ -257,6 +262,7 @@
                     <label class="item-quantity"> Quantity
                         <input id="mugs-3-quantity" type="number" min="1" max="10" value="1">
                     </label>
+                    <!-- Price and the name is passed to the data attributes so they can be easily accessed by the javascript -->
                     <button id="mugs-3" data-item-name="Elephant Foot Mug" data-price=1070.0
                             class="btn-add-cart"
                             onclick="addToCart(this.id)"><span>Add to Cart </span> <i class="material-icons"
@@ -410,6 +416,7 @@
             <button class="bg-success" type="submit" onclick="checkout();">Place the Order</button>
         </div>
     </div>
+    <p class="text-danger text-center">Disclaimer: This Store was made to do a demonstration non of the items are real</p>
 </section>
 
 <footer>
