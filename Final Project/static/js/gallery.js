@@ -13,12 +13,12 @@ function selectBackground(){
                     // Determine your target color (default 0 index to transparent)
                     var BGcolor = (BGselect.selectedIndex != 0) ? BGselect.options[BGselect.selectedIndex].value:"white";
                     // Update results area
-                    document.getElementById("imgdescription").style.backgroundColor = BGcolor;
+                    document.getElementById("gallery").style.backgroundColor = BGcolor;
                     }
 function selectText(){
                     // Find selector and pull it's selection
                     var TXTselect = document.getElementById('TxtColor');
                     // Determine target color (default 0 index to transparent)
                     var TXTcolor = (TXTselect.selectedIndex != 0) ? TXTselect.options[TXTselect.selectedIndex].value:"Black";
-                    document.getElementById("imgdescription").style.color = TXTcolor;
+                    document.getElementById("gallery").style.color = TXTcolor;
                     }

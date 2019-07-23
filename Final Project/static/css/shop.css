@@ -242,6 +242,10 @@ button[type=submit] {
     transition: 0.5s;
 }
 
+/*
+    inspired by - https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate1
+*/
+
 .btn-add-cart i:after {
     content: 'add_shopping_cart';
     position: absolute;

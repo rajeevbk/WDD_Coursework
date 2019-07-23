@@ -2,11 +2,12 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-   <title>Quiz</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Quiz</title>
     <style media="screen">
-      #quiz-container{
-            //font-size: 20px;
+        #quiz-container {
+        / / font-size: 20 px;
             font-family: 'Work Sans', sans-serif;
             color: #333;
             font-weight: 300;
@@ -18,7 +19,7 @@
             font-weight: 300;
             margin: 0px;
             padding: 10px;
-            font-size: 20px;
+            font-size: 1.6em;
             background-color: #444;
             color: #fff;
         }
@@ -27,7 +28,7 @@
             font-weight: 300;
             margin: 0px;
             padding: 10px;
-            font-size: 25px;
+            font-size: 1.6em;
 
         }
 
@@ -36,13 +37,13 @@
             height: 750px;
             margin-top: 40px;
             text-align: center;
-            //border-style: solid;
+        / / border-style: solid;
             border-width: 5px;
 
         }
 
         #timer {
-            font-size: 24px;
+            font-size: 1.55em;
             font-family: 'Work Sans', sans-serif;
             text-align: center;
             margin-top: 40px;
@@ -73,7 +74,9 @@
         }
     </style>
     <link rel="stylesheet" type="text/css" href="static/css/navbar.css">
-    <link rel="stylesheet" type="text/css" href="static/fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="static/webfonts/fontawesome/css/all.min.css">
+    <link rel="icon" href="static/img/Logo/Grouplogo.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
 
 
 </head>
@@ -82,23 +85,30 @@
 <header>
     <nav id="desktop-nav">
         <ul>
-            <li><a id="logo" class="active" href="javascript:void(0)"><i class="fas fa-globe-asia"></i> <i
-                    class="fas fa-plane-departure fa-lg"></i></a></li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#aboutUs">About Us</a></li>
+            <li><a id="logo-wrapper" class="active" href="javascript:void(0)">
+                <img class="logo" src="static/img/Logo/Grouplogo.svg" alt="Logo">
+            </a></li>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
             <li><a class="active" href="quiz.html">Quiz</a></li>
-            <li><a href="#gallery">Galley</a></li>
+            <li><a href="index.html#gallery">Galley</a></li>
             <li><a href="shop.html">Store</a></li>
             <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Meet the Team</a>
+                <a href="javascript:void(0)">Meet the Team</a>
                 <div class="dropdown-content">
                     <a href="CVs/isala.html">Isala Piyarisi</a>
+                    <a href="CVs/kevin.html">Kevin Kularathne</a>
+                    <a href="CVs/rajeev.html">Rajeev Kodippily</a>
+                    <a href="CVs/rahma.html">Rahma Hamza</a>
                 </div>
             </li>
             <li class="dropdown">
                 <a href="javascript:void(0)">Places to Visit</a>
                 <div class="dropdown-content">
                     <a href="Places/ellaRock.html">Ella Rock</a>
+                    <a href="Places/unawatuna.html">Unawatuna</a>
+                    <a href="Places/singharaja.html">Singharaja</a>
+                    <a href="Places/sigiriya.html">Sigiriya</a>
                 </div>
             </li>
             <li><a href="sitemap.html">Site Map</a></li>
@@ -108,27 +118,34 @@
     </nav>
     <nav id="mobile-nav">
         <ul id="mobile-nav-menu">
-            <li><a id="logo" class="active" href="javascript:void(0)"><i class="fas fa-globe-asia"></i> <i
-                    class="fas fa-plane-departure fa-lg"></i></a></li>
+            <li><a id="logo-wrapper" class="active" href="javascript:void(0)">
+                <img class="logo" src="static/img/Logo/Grouplogo.svg" alt="Logo">
+            </a></li>
             <li onclick="toggleMobileNavBar();"><i class="fas fa-bars text-white nav-right fa-2x"
                                                    style="margin: 5px"></i></li>
         </ul>
         <ul id="mobile-nav-items" class="d-none">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#aboutUs">About Us</a></li>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
             <li><a class="active" href="quiz.html">Quiz</a></li>
-            <li><a href="#gallery">Galley</a></li>
+            <li><a href="index.html#gallery">Galley</a></li>
             <li><a href="shop.html">Store</a></li>
             <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Meet the Team</a>
+                <a href="javascript:void(0)">Meet the Team</a>
                 <div class="dropdown-content">
                     <a href="CVs/isala.html">Isala Piyarisi</a>
+                    <a href="CVs/kevin.html">Kevin Kularathne</a>
+                    <a href="CVs/rajeev.html">Rajeev Kodippily</a>
+                    <a href="CVs/rahma.html">Rahma Hamza</a>
                 </div>
             </li>
             <li class="dropdown">
                 <a href="javascript:void(0)">Places to Visit</a>
                 <div class="dropdown-content">
                     <a href="Places/ellaRock.html">Ella Rock</a>
+                    <a href="Places/unawatuna.html">Unawatuna</a>
+                    <a href="Places/singharaja.html">Singharaja</a>
+                    <a href="Places/sigiriya.html">Sigiriya</a>
                 </div>
             </li>
             <li><a href="sitemap.html">SiteMap</a></li>
@@ -300,5 +317,9 @@
 
 </script>
 <script src="static/js/navbar.js"></script>
+<footer>
+    Made with <i class="fas fa-heart text-danger"></i> from <a href="CVs/rajeev.html">Rajeev Kodippily</a> - 2018639
+</footer>
+
 </body>
 </html>

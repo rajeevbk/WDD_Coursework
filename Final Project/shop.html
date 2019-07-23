@@ -5,11 +5,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="static/MaterialIcons/material-icons.css" rel="stylesheet">
+    <link href="static/webfonts/materialicons/material-icons.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="static/css/main.css">
     <link rel="stylesheet" type="text/css" href="static/css/navbar.css">
     <link rel="stylesheet" type="text/css" href="static/css/shop.css">
-    <link rel="stylesheet" type="text/css" href="static/fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="static/webfonts/fontawesome/css/all.min.css">
+    <link rel="icon" href="static/img/Logo/Grouplogo.png" type="image/png">
     <title>Visit Sri Lanka | Shop</title>
 </head>
 
@@ -17,14 +18,17 @@
 <header>
     <nav id="desktop-nav">
         <ul>
-            <li><a id="logo" class="active" href="javascript:void(0)"><i class="fas fa-globe-asia"></i> <i
-                    class="fas fa-plane-departure fa-lg"></i></a></li>
-            <li><a href="index.html">Home</a></li>
+            <!-- Java script void(0) to is just null pointer -->
+            <li><a id="logo-wrapper" class="active" href="javascript:void(0)">
+                <img class="logo" src="static/img/Logo/Grouplogo.svg" alt="Logo of Travel Sri Lanka">
+            </a></li>
+            <li><a href="index.html#home">Home</a></li>
             <li><a href="index.html#aboutUs">About Us</a></li>
             <li><a href="quiz.html">Quiz</a></li>
             <li><a href="index.html#gallery">Galley</a></li>
             <li class="dropdown active">
-                <a href="javascript:void(0)">Store</a>
+                <!-- here I updated void(0) to void(1) because WAVE is telling me multiple links are pointed at the same location -->
+                <a href="javascript:void(1)">Store</a>
                 <div class="dropdown-content">
                     <a href="#clothing">T-Shirts & Shirts</a>
                     <a href="#mugs">Mugs</a>
@@ -32,15 +36,21 @@
                 </div>
             </li>
             <li class="dropdown">
-                <a href="javascript:void(0)">Meet the Team</a>
+                <a href="javascript:void(2)">Meet the Team</a>
                 <div class="dropdown-content">
                     <a href="CVs/isala.html">Isala Piyarisi</a>
+                    <a href="CVs/kevin.html">Kevin Kularathne</a>
+                    <a href="CVs/rajeev.html">Rajeev Kodippily</a>
+                    <a href="CVs/rahma.html">Rahma Hamza</a>
                 </div>
             </li>
             <li class="dropdown">
-                <a href="javascript:void(0)">Places to Visit</a>
+                <a>Places to Visit</a>
                 <div class="dropdown-content">
                     <a href="Places/ellaRock.html">Ella Rock</a>
+                    <a href="Places/unawatuna.html">Unawatuna</a>
+                    <a href="Places/singharaja.html">Singharaja</a>
+                    <a href="Places/sigiriya.html">Sigiriya</a>
                 </div>
             </li>
             <li><a href="sitemap.html">Site Map</a></li>
@@ -50,13 +60,14 @@
     </nav>
     <nav id="mobile-nav">
         <ul id="mobile-nav-menu">
-            <li><a id="logo" class="active" href="javascript:void(0)"><i class="fas fa-globe-asia"></i> <i
-                    class="fas fa-plane-departure fa-lg"></i></a></li>
+            <li><a id="logo-wrapper" class="active" href="javascript:void(3)">
+                <img class="logo" src="static/img/Logo/Grouplogo.svg" alt="Logo of Travel Sri Lanka">
+            </a></li>
             <li onclick="toggleMobileNavBar();"><i class="fas fa-bars text-white nav-right fa-2x"
                                                    style="margin: 5px"></i></li>
         </ul>
         <ul id="mobile-nav-items" class="d-none">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#home">Home</a></li>
             <li><a href="index.html#aboutUs">About Us</a></li>
             <li><a href="quiz.html">Quiz</a></li>
             <li><a href="index.html#gallery">Galley</a></li>
@@ -69,15 +80,21 @@
                 </div>
             </li>
             <li class="dropdown">
-                <a href="javascript:void(0)">Meet the Team</a>
+                <a href="javascript:void(4)">Meet the Team</a>
                 <div class="dropdown-content">
                     <a href="CVs/isala.html">Isala Piyarisi</a>
+                    <a href="CVs/kevin.html">Kevin Kularathne</a>
+                    <a href="CVs/rajeev.html">Rajeev Kodippily</a>
+                    <a href="CVs/rahma.html">Rahma Hamza</a>
                 </div>
             </li>
             <li class="dropdown">
-                <a href="javascript:void(0)">Places to Visit</a>
+                <a href="javascript:void(5)">Places to Visit</a>
                 <div class="dropdown-content">
                     <a href="Places/ellaRock.html">Ella Rock</a>
+                    <a href="Places/unawatuna.html">Unawatuna</a>
+                    <a href="Places/singharaja.html">Singharaja</a>
+                    <a href="Places/sigiriya.html">Sigiriya</a>
                 </div>
             </li>
             <li><a href="sitemap.html">SiteMap</a></li>
@@ -108,7 +125,10 @@
                     <label class="item-quantity"> Quantity
                         <input id="clothing-1-quantity" type="number" min="1" max="10" value="1">
                     </label>
-                    <button id="clothing-1" data-item-name="Elephant T-Shirt" data-price=1200.0
+                    <!-- this.id refers to ID of the current element -->
+                    <button id="clothing-1"
+                            data-item-name="Elephant T-Shirt"
+                            data-price=1200.0
                             class="btn-add-cart"
                             onclick="addToCart(this.id)"><span>Add to Cart </span> <i class="material-icons"
                                                                                       style="vertical-align: middle;"></i>
@@ -126,6 +146,7 @@
                     <label class="item-quantity"> Quantity
                         <input id="clothing-2-quantity" type="number" min="1" max="10" value="1">
                     </label>
+                    <!-- this.id refers to ID of the current element -->
                     <button id="clothing-2" data-item-name="Devil Masks T-Shirt" data-price=1499.99
                             class="btn-add-cart"
                             onclick="addToCart(this.id)"><span>Add to Cart </span> <i class="material-icons"
@@ -222,6 +243,7 @@
                     <label class="item-quantity"> Quantity
                         <input id="mugs-2-quantity" type="number" min="1" max="10" value="1">
                     </label>
+                    <!-- this.id refers to ID of the current element -->
                     <button id="mugs-2" data-item-name="I Love Sri Lanka Mug" data-price=470.0
                             class="btn-add-cart"
                             onclick="addToCart(this.id)"><span>Add to Cart </span> <i class="material-icons"
@@ -240,6 +262,7 @@
                     <label class="item-quantity"> Quantity
                         <input id="mugs-3-quantity" type="number" min="1" max="10" value="1">
                     </label>
+                    <!-- Price and the name is passed to the data attributes so they can be easily accessed by the javascript -->
                     <button id="mugs-3" data-item-name="Elephant Foot Mug" data-price=1070.0
                             class="btn-add-cart"
                             onclick="addToCart(this.id)"><span>Add to Cart </span> <i class="material-icons"
@@ -393,6 +416,7 @@
             <button class="bg-success" type="submit" onclick="checkout();">Place the Order</button>
         </div>
     </div>
+    <p class="text-danger text-center">Disclaimer: This Store was made to do a demonstration non of the items are real</p>
 </section>
 
 <footer>

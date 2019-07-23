@@ -1,10 +1,12 @@
 /*
     Inspired by https://www.w3schools.com/css/css_navbar.asp
 */
-#logo {
+#logo-wrapper {
     background: none;
     color: #39aba4;
     float: left;
+    margin: 3px 5px 2px 5px;
+    padding: 2px 0 0 0;
 }
 
 nav ul {
@@ -92,6 +94,10 @@ li.dropdown {
     cursor: pointer;
     border-radius: 50%;
     padding: 15px;
+}
+
+.logo{
+    height: 35px;
 }
 
 @media (max-width: 1065px) {
