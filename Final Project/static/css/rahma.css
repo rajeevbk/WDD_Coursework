@@ -52,6 +52,12 @@ h1{
 	width:33.33%;
 }
 
+img{
+    height:250px;
+    width:200px;
+    float:right;
+}
+
 .right{
 	float:right;
 	height:100%;
@@ -95,6 +101,7 @@ h1{
 .nameDeets .myInfo{
 	margin:0 auto;
 	width:85%;
+	font-size:22px;
 }
 
 .internal{
@@ -110,7 +117,8 @@ h1{
 
 .internal p
 {
-	color:rgba(0,0,0,.3);
+	color:#51709B;
+	font-size:22px;
 }
 
 .internal p em{
