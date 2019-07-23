@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	      <title>My Coursework Form</title>
+		  <meta charset = "UTF-8">
+		  <link rel="stylesheet"  href="Courseworkstylepage.css">
+	
+        <script src = "FormsJavaScript.js"></script>
+   	    <link rel="stylesheet" type="text/css" href="FormsCSS.css">
+	</head>
+	
+<body>	
+<H1>Sri Lanka Tourism</H1>
+
+<div class = "mydiv_class">
+ <form id = "CommentForm" action = "file:///C:/Users/Rahma/Documents/Web%20D%20&%20D%20-%20Sem1(everything)/InshaAllahSEM2_MAIN%20CW/ActionPage.html" 
+ name = "myForm" onsubmit = " return myFormValidation();"
+ target="_blank" method = "post">  <!--always better to use post-->
+ 
+    <fieldset style = color: #fa625f;> <!--This puts a border around our form-->
+    <legend style = color:blue;>Comment Form for WebSite</legend>
+	
+	<h2 align = "center">User Information and Comments</h2>
+	<ul class="MyFormContent">
+        <li >
+		<label >First and Last Name * </label>
+	    <input type="text" name="firstname" class="field-divided" placeholder="Enter your first name" id = "firstname"/> 
+		<input type="text" name="lastname" class="field-divided" placeholder="Enter Your Last Name" id="lastname"/>
+		</li><br>
+		
+		
+		
+		<li>
+		<label>Age Category</label>
+        <input list="AgeCatg" placeholder="Pick your age category">
+         <datalist id="AgeCatg">
+           <option value="8 - 17 years">
+           <option value="18 - 24 years">
+           <option value="24 - 30 years">
+           <option value="30 - 36 years">
+           <option value="36 - 45 years">
+		   <option value="45 - 55 years">
+		   <option value="55 - 60 years">
+		   <option value="60 and above">
+		 </datalist> 
+		</li><br>
+		
+		
+		<li>
+        <label>Email</label>
+        <input type="email" name="E-mail" class="field-long" placeholder = "Your Email address">
+        </li><br>
+		
+		
+		<li>
+		<label>Contact Number</label>
+		<input type="number" name="PhoneNo" class="field-divided" placeholder="Enter a valid phone number"/>
+		</li><br>
+		
+		<li>
+		  <label>Country + City (Optional)</label>
+		  <input type="text" name="city" class="field-divided" placeholder="Which country do you come from"/> <br>
+		  <input type="text" name="state" class="field-divided" placeholder = "The city you live in(optional)">
+		</li><br>
+	
+		
+		<li>Fill in the following field if you aren't currently a Sri Lankan citizen or have no Sri Lankan roots
+		  <label>On how many occasions have you been to Sri Lanka</label>
+		  <input type = "number" name = "NumofTimes" min = "1" max = "10" step = "1" value = "0">
+		</li>
+        
+        <li>
+            <label>Would you consider visiting again(We appreciate your honesty)</label>
+		  <input type="radio" name="preferance" value="yes">
+          Yes:)<br>
+          
+          <input type="radio" name="preferance" value="no">
+           No:(<br>
+        </li>
+        <br>
+		
+		<li>
+		  <label>We would love for you to rate our web site...so please go ahead and pick from one of the options</label>
+		  <input type="radio" name="rating" value="not a fan" id="oneStar" 
+		   onsubmit="myFormValidation();">I'm not a fan of it :(<br>
+            
+		  <input type="radio" name="rating" value="seen better" id="twoStar"
+		   onsubmit="myFormValidation();">I've seen better :/<br>
+            
+		  <input type="radio" name="rating" value="Not too good nor bad" 
+		   id="threeStar" onsubmit="myFormValidation();">Not too good! Not that bad either ):)<br>
+            
+		  <input type="radio" name="rating" value="Liked" id="fourStar"
+		   onsubmit="myFormValidation();">Liked it! Keep it up :)<br>
+            
+		  <input type="radio" name="rating" value="Amazing-impressed" 
+		   id="fiveStar" onsubmit="myFormValidation();">Amazing....I'm very impressed :p
+		</li>
+		<br>
+		
+		<li>
+		  <label>Any Comments</label> 
+          <p></p>		  
+		  <textarea name="field5" id="field5" class="field-long field-textarea" style="width:200px; height:300px;" placeholder = "Anything you'd like to share with us!! 
+		  (Your opinions/ ideas/ thoughts/ comments/ feedback are more than welcome :)" id = "userComments"></textarea>
+		</li>
+		<br>
+		
+		
+		<input type="submit" value="Check and Submit">
+		<br><br>
+		<input type="reset">
+		<br><br>
+		<button type="button" onclick="alert('Thank you for your time in filling out the application')">Done!</button>
+		
+		
+  </form>
+</div>
+</body>
+</html>	
+    
+<!--else if(document.getElementById('oneStar').checked){
+                 alert(document.getElementById('oneStar').innerHTML =
+                 'Thank for rating 1 star');
+		  }else if(document.getElementById(twoStar).checked){
+		          alert(document.getElementById('twoStar').innerHTML = 'Thank for rating 2 star');
+		  }else if(document.getElementById(threeStar).checked){
+		          alert(document.getElementById('threeStar').innerHTML =
+                  'Thank for rating 3 star');
+          }else if(document.getElementById(fourStar).checked){
+		          alert(document.getElementById('fourStar').innerHTML = 'Thank for rating 4 star');
+          }else if(document.getElementById(fiveStar).checked){
+		          alert(document.getElementById('fiveStar').innerHTML = 
+                  'Thank for rating 5 star);
+          } 
+          -->
