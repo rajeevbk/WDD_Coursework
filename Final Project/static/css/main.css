@@ -6,6 +6,13 @@
 
 /*  Color utils   */
 
+p {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
 .bg-black{
     background-color: #000;
 }
