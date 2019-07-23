@@ -1,4 +1,6 @@
-body,object,h1,h2,p,block,em,img,ul,article,section {
+/*Kevin CV CSS*/
+
+body,h1,h2,p,block,img,ul,article,section {
 border:0;
 font:inherit;
 font-size:100%;
