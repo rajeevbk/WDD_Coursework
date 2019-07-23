@@ -1,0 +1,129 @@
+             body{
+			    background:ivory;
+				font-family: sans-serif;
+			 }	
+		  
+		     H1{
+			    color:#0F2070;
+				text-align:center;
+		     }
+			 
+			 input{
+			    width: 70%; <!--full width input feild is 100%-->
+			 }
+			 
+			 input[type = "radio"]{
+			    width: 3%;
+			 }
+			
+			 .mydiv_class{
+			    width: 950px;
+				background:#083B5C ;
+				padding: 45px 20px;
+				box-sizing: border-box; <!--without this line try it is so not nice-->
+				position: fixed;
+				left: 80%;
+				top: 50%;
+                margin-left: 220px;
+				border-radius: 3px;
+				transform: translate(10px,3px);
+				float: center;
+             }
+			 
+			 .MyFormContent {
+	            margin:10px auto;
+	            max-width: 400px;
+	            padding: 20px 12px 10px 20px;
+	            font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+			 }
+
+			 .MyFormContent li {
+	            padding: 2;
+	            display: block;
+	            list-style: none;
+	            margin: 10px 0 0 0;
+             }
+			 
+			 .MyFormContent .field-divided{
+	            width: 49%;
+             }
+
+             .MyFormContent .field-long{
+	            width: 100%;
+             }
+			 
+             .MyFormContent .field-select{
+	            width: 100%;
+             }
+			 
+             .MyFormContent .field-textarea{
+	            height: 100px;
+             }
+			 
+             .MyFormContent input[type=submit], .MyFormContent input[type=button]{
+	            color: white;
+				background: #083B5C;
+	            padding: 8px 15px 8px 15px;
+				margin: 4px 2px;
+	            border: none;
+				cursor: pointer;
+			 }
+			 
+			 input[type=text], .MyFormContent input[type=password], .MyFormContent input[type=number], .MyFormContent input[type=email],,select {
+                display: inline-block;
+			    width: 100%;
+                padding: 16px 18px;
+                margin: 8px 0;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+             }
+			 
+			 .MyFormContent input[type=text]:focus, 
+             .MyFormContent input[type=number]:focus,
+             .MyFormContent input[type=email]:focus,
+			 .MyFormContent textarea:focus, 
+             .MyFormContent select:focus{
+	            -moz-box-shadow: 0 0 8px #88D5E9;
+	            -webkit-box-shadow: 0 0 8px #88D5E9;
+	             box-shadow: 0 0 8px #88D5E9;
+	             border: 1px solid #88D5E9;
+             }
+			 
+			 .MyFormContent textarea{  <!--Not part of what we learnt but just did a little extra reseach and so I added a bit of animation-->
+	             box-sizing: border-box;
+	             -webkit-box-sizing: border-box;
+	             -moz-box-sizing: border-box;
+	             border:10px solid #BEBEBE;
+	             padding: 7px;
+	             margin:0px;
+				 display:block;
+	             -webkit-transition: all 0.5s ease-in-out;
+	             -moz-transition: all 0.5s ease-in-out;
+	             -ms-transition: all 0.5s ease-in-out;
+	             -o-transition: all 0.5s ease-in-out;
+	             outline: none;	
+             }
+			 
+			 .MyFormContent input[type=submit]:hover, 
+			 .MyFormContent input[type=button]:hover{
+	                                           background: #9CCCDB;
+	                                           box-shadow:none;
+	                                           -moz-box-shadow:none;
+	                                           -webkit-box-shadow:none;
+		     }
+
+             .MyFormContent label{
+	            margin:0 0 3px 0;
+	            padding:0px;
+	            display:block;
+	            font-weight: bold;
+             }
+			 
+			 #CommentForm{
+			    background: #9CCCDB;
+			 }
+			 
+			 label{
+			    display:block;
+			 }
